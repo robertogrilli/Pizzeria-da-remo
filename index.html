@@ -1,1144 +1,620 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Remo a Testaccio — La Pizza Romana dal 1960 | Piazza Santa Maria Liberatrice, Roma</title>
-<meta name="description" content="La pizza romana autentica nel cuore di Testaccio. Scrocchiarella, sottile, cotta nel forno a legna. Dal 1960, senza prenotazione — arriva, dai il nome, aspetta. Ne vale la pena.">
-<meta property="og:title" content="Remo a Testaccio — La Pizza Romana">
-<meta property="og:description" content="La pizza più sottile di Roma. Forno a legna, impasto della tradizione, Testaccio. Aperto ogni sera dalle 19.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=1200&q=85">
-<meta property="og:url" content="https://remoatestaccio.github.io">
-<meta property="og:type" content="restaurant">
-<link rel="canonical" href="https://remoatestaccio.github.io">
-
-<!-- GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','GA_MEASUREMENT_ID');</script>
-
-<!-- Schema.org -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Restaurant",
-  "name": "Remo a Testaccio",
-  "alternateName": "Pizzeria da Remo",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Piazza Santa Maria Liberatrice 44",
-    "addressLocality": "Roma",
-    "postalCode": "00153",
-    "addressCountry": "IT"
-  },
-  "telephone": "+390657462701",
-  "openingHours": ["Mo 19:00-01:00","Tu 19:00-01:00","We 19:00-01:00","Th 19:00-01:00","Fr 19:00-01:00","Sa 19:00-01:00"],
-  "servesCuisine": "Pizza Romana",
-  "priceRange": "€",
-  "hasMap": "https://maps.google.com/?q=Piazza+Santa+Maria+Liberatrice+44+Roma",
-  "sameAs": ["https://www.instagram.com/remoatestaccio/","https://www.facebook.com/p/pizzeria-Remo-a-testaccio-100063456734857/"]
-}
-</script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
-
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Remo a Testaccio — La Pizza Romana dal 1960 | Roma</title>
+<meta name="description" content="La pizza romana più sottile di Roma. Scrocchiarella, cotta a legna, nella piazza di Testaccio dal 1960. Chiama: 06 574 6270"/>
+<meta property="og:title" content="Remo a Testaccio — La Pizza Romana dal 1960"/>
+<meta property="og:image" content="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=1200&q=80"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Remo a Testaccio","address":{"@type":"PostalAddress","streetAddress":"Piazza Santa Maria Liberatrice 44","addressLocality":"Roma","postalCode":"00153","addressRegion":"Lazio","addressCountry":"IT"},"telephone":"+390657462701","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"19:00","closes":"01:00"}],"servesCuisine":"Pizza Romana","priceRange":"€€"}</script>
 <style>
-:root {
-  --nero: #0e0c0a;
-  --carbone: #1a1714;
-  --cenere: #2d2925;
-  --oro: #c8933a;
-  --oro-chiaro: #e8b35a;
-  --crema: #f4ede0;
-  --bianco: #faf7f2;
-  --rosso: #8b2e1a;
-  --testo: #e8e0d4;
-  --testo-muted: #9a8f82;
-  --sans: 'Barlow Condensed', sans-serif;
-  --body: 'Barlow', sans-serif;
-  --serif: 'Playfair Display', serif;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;font-size:16px;}
-body{background:var(--nero);color:var(--testo);font-family:var(--body);font-weight:300;overflow-x:hidden;}
-
-/* ===== SCROLLBAR ===== */
-::-webkit-scrollbar{width:4px;}
-::-webkit-scrollbar-track{background:var(--nero);}
-::-webkit-scrollbar-thumb{background:var(--oro);border-radius:2px;}
-
-/* ===== NOISE TEXTURE ===== */
-body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:.5;}
-
-/* ===== NAV ===== */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 40px;height:68px;display:flex;align-items:center;justify-content:space-between;transition:background .4s,backdrop-filter .4s;background:rgba(14,12,10,.75);backdrop-filter:blur(8px);}
-nav.scrolled{background:rgba(14,12,10,.96);backdrop-filter:blur(16px);}
-.nav-logo{font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--crema);text-decoration:none;letter-spacing:.02em;flex-shrink:0;}
-.nav-logo em{color:var(--oro);font-style:italic;}
-.nav-right{display:flex;align-items:center;gap:24px;}
-.nav-links{display:flex;align-items:center;gap:24px;}
-.nav-links a{font-family:var(--sans);font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--testo-muted);text-decoration:none;transition:color .3s;white-space:nowrap;}
-.nav-links a:hover{color:var(--oro);}
-/* Lang switcher — always visible */
-.lang-switcher{display:flex;align-items:center;border:1px solid rgba(200,147,58,.35);border-radius:2px;overflow:hidden;flex-shrink:0;}
-.lang-btn{font-family:var(--sans);font-size:.7rem;letter-spacing:.12em;font-weight:600;background:none;border:none;color:var(--testo-muted);cursor:pointer;padding:6px 11px;transition:background .2s,color .2s;line-height:1;}
-.lang-btn.active{background:var(--oro);color:var(--nero);}
-.lang-btn:not(.active):hover{color:var(--oro);}
-/* Nav CTA */
-.nav-cta{font-family:var(--sans);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;background:transparent;color:var(--oro);border:1px solid var(--oro);padding:9px 20px;text-decoration:none;position:relative;overflow:hidden;transition:color .3s;white-space:nowrap;flex-shrink:0;}
-.nav-cta::before{content:'';position:absolute;inset:0;background:var(--oro);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.16,1,.3,1);}
-.nav-cta:hover::before{transform:scaleX(1);}
-.nav-cta:hover{color:var(--nero);}
-.nav-cta-inner{position:relative;z-index:1;}
-/* Hamburger */
-.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;flex-shrink:0;}
-.nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--crema);transition:transform .3s,opacity .3s;}
-.nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
-.nav-hamburger.open span:nth-child(2){opacity:0;}
-.nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
-/* Mobile menu drawer */
-.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(14,12,10,.98);backdrop-filter:blur(16px);z-index:999;padding:24px 28px 32px;border-top:1px solid rgba(200,147,58,.15);transform:translateY(-10px);opacity:0;transition:transform .35s cubic-bezier(.16,1,.3,1),opacity .35s;}
-.mobile-menu.open{transform:translateY(0);opacity:1;}
-.mobile-menu a{display:block;font-family:var(--sans);font-size:1rem;letter-spacing:.15em;text-transform:uppercase;color:var(--testo-muted);text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(200,147,58,.08);transition:color .2s;}
-.mobile-menu a:hover{color:var(--oro);}
-.mobile-menu .mobile-cta{display:block;margin-top:20px;text-align:center;font-family:var(--sans);font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;background:var(--oro);color:var(--nero);padding:16px;text-decoration:none;font-weight:600;}
-.lang-toggle{font-family:var(--sans);font-size:.75rem;letter-spacing:.15em;background:none;border:none;color:var(--testo-muted);cursor:pointer;padding:4px 8px;}
-.lang-toggle.active{color:var(--oro);}
-
-/* ===== HERO ===== */
-#hero{position:relative;height:100vh;min-height:700px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;}
-.hero-bg{position:absolute;inset:0;z-index:0;}
-.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);animation:kenburns 20s ease-out forwards;}
-@keyframes kenburns{from{transform:scale(1.06);}to{transform:scale(1);}}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(14,12,10,1) 0%,rgba(14,12,10,.7) 40%,rgba(14,12,10,.2) 70%,transparent 100%);}
-.hero-content{position:relative;z-index:2;padding:0 60px 80px;}
-.hero-eyebrow{font-family:var(--sans);font-size:.7rem;letter-spacing:.4em;text-transform:uppercase;color:var(--oro);margin-bottom:20px;opacity:0;animation:fadeUp .8s .3s forwards;}
-.hero-title{font-family:var(--serif);font-size:clamp(3.5rem,9vw,9rem);line-height:.92;font-weight:900;color:var(--bianco);overflow:hidden;margin-bottom:28px;}
-.hero-title-line{display:block;transform:translateY(100%);animation:slideUp .9s cubic-bezier(.16,1,.3,1) forwards;}
-.hero-title-line:nth-child(1){animation-delay:.4s;}
-.hero-title-line:nth-child(2){animation-delay:.58s;}
-.hero-title-line:nth-child(3){animation-delay:.58s;}
-.hero-name{color:var(--bianco);font-size:clamp(3rem,8vw,8.5rem);}
-.hero-tagline-it,.hero-tagline-en{color:var(--oro);font-style:italic;font-size:clamp(1.6rem,4vw,4rem);line-height:1.1;}
-.hero-sub{font-family:var(--sans);font-size:1rem;letter-spacing:.08em;color:var(--testo-muted);max-width:420px;line-height:1.7;margin-bottom:40px;opacity:0;animation:fadeUp .8s .9s forwards;}
-.hero-actions{display:flex;align-items:center;gap:24px;opacity:0;animation:fadeUp .8s 1.1s forwards;}
-.cta-primary{display:inline-flex;align-items:center;gap:12px;font-family:var(--sans);font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;background:var(--oro);color:var(--nero);padding:16px 32px;text-decoration:none;position:relative;overflow:hidden;transition:transform .15s;}
-.cta-primary::after{content:'';position:absolute;inset:0;background:var(--oro-chiaro);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.16,1,.3,1);}
-.cta-primary span{position:relative;z-index:1;}
-.cta-primary:hover::after{transform:scaleX(1);}
-.cta-primary:active{transform:scale(.97);}
-.hero-scroll{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--testo-muted);text-decoration:none;}
-.hero-scroll-line{width:40px;height:1px;background:var(--testo-muted);}
-.hero-badge{position:absolute;top:50%;right:60px;transform:translateY(-50%);text-align:center;opacity:0;animation:fadeIn 1s 1.5s forwards;}
-.hero-badge-ring{width:120px;height:120px;border:1px solid rgba(200,147,58,.4);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;animation:rotateSlow 20s linear infinite;}
-@keyframes rotateSlow{to{transform:rotate(360deg);}}
-.hero-badge-inner{animation:rotateSlow 20s linear infinite reverse;}
-.hero-badge-num{font-family:var(--serif);font-size:2.2rem;font-weight:900;color:var(--oro);line-height:1;}
-.hero-badge-text{font-family:var(--sans);font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:var(--testo-muted);}
-
-@keyframes slideUp{to{transform:translateY(0);}}
-@keyframes fadeUp{to{opacity:1;transform:none;}}
-@keyframes fadeIn{to{opacity:1;}}
-
-/* ===== DIVIDER SVG ===== */
-.divider-svg{display:block;width:100%;overflow:hidden;line-height:0;}
-
-/* ===== MANIFESTO ===== */
-#manifesto{background:var(--nero);padding:120px 60px;}
-.manifesto-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1200px;margin:0 auto;}
-.manifesto-label{font-family:var(--sans);font-size:.65rem;letter-spacing:.4em;text-transform:uppercase;color:var(--oro);margin-bottom:16px;}
-.manifesto-title{font-family:var(--serif);font-size:clamp(2rem,4vw,3.5rem);line-height:1.1;font-weight:700;color:var(--bianco);margin-bottom:24px;}
-.manifesto-title em{color:var(--oro);font-style:italic;}
-.manifesto-body{font-family:var(--body);font-size:1rem;line-height:1.85;color:var(--testo-muted);max-width:480px;}
-.manifesto-body p+p{margin-top:16px;}
-.manifesto-stats{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
-.stat-block{background:var(--carbone);padding:36px 28px;}
-.stat-num{font-family:var(--serif);font-size:3.5rem;font-weight:900;color:var(--oro);line-height:1;}
-.stat-label{font-family:var(--sans);font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--testo-muted);margin-top:6px;}
-
-/* ===== PHOTO STRIP ===== */
-#foto-strip{padding:0;overflow:hidden;}
-.foto-row{display:flex;gap:4px;}
-.foto-item{flex:1;overflow:hidden;aspect-ratio:4/3;position:relative;}
-.foto-item img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.16,1,.3,1);}
-.foto-item:hover img{transform:scale(1.06);}
-.foto-item-tall{flex:1.4;aspect-ratio:3/4;}
-
-/* ===== MENU ===== */
-#menu{background:var(--carbone);padding:120px 60px;}
-.section-header{text-align:center;margin-bottom:70px;}
-.section-eyebrow{font-family:var(--sans);font-size:.65rem;letter-spacing:.4em;text-transform:uppercase;color:var(--oro);display:block;margin-bottom:14px;}
-.section-title{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.5rem);font-weight:700;color:var(--bianco);}
-.section-title em{color:var(--oro);font-style:italic;}
-.menu-tabs{display:flex;justify-content:center;gap:0;margin-bottom:60px;border-bottom:1px solid rgba(200,147,58,.2);}
-.menu-tab{font-family:var(--sans);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;background:none;border:none;color:var(--testo-muted);padding:14px 28px;cursor:pointer;position:relative;transition:color .3s;}
-.menu-tab.active{color:var(--oro);}
-.menu-tab.active::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:2px;background:var(--oro);}
-.menu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:2px;max-width:1200px;margin:0 auto;}
-.menu-card{background:var(--cenere);overflow:hidden;cursor:pointer;position:relative;group:true;}
-.menu-card-img{aspect-ratio:4/3;overflow:hidden;}
-.menu-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.16,1,.3,1),filter .6s;}
-.menu-card:hover .menu-card-img img{transform:scale(1.08);filter:saturate(1.2);}
-.menu-card-info{padding:20px;}
-.menu-card-cat{font-family:var(--sans);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--oro);margin-bottom:6px;}
-.menu-card-name{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--bianco);margin-bottom:4px;}
-.menu-card-desc{font-family:var(--body);font-size:.8rem;color:var(--testo-muted);line-height:1.5;margin-bottom:10px;}
-.menu-card-price{font-family:var(--sans);font-size:1.1rem;font-weight:600;color:var(--oro);}
-.menu-card-overlay{position:absolute;inset:0;background:rgba(14,12,10,0);transition:background .3s;display:flex;align-items:center;justify-content:center;}
-.menu-card:hover .menu-card-overlay{background:rgba(14,12,10,.2);}
-.menu-card-zoom{font-family:var(--sans);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--bianco);border:1px solid rgba(255,255,255,.6);padding:8px 16px;opacity:0;transform:translateY(10px);transition:opacity .3s,transform .3s;}
-.menu-card:hover .menu-card-zoom{opacity:1;transform:translateY(0);}
-.menu-panel{display:none;}
-.menu-panel.active{display:block;}
-
-/* ===== MODAL ===== */
-#modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:2000;align-items:center;justify-content:center;padding:20px;}
-#modal-overlay.open{display:flex;}
-.modal{background:var(--carbone);max-width:800px;width:100%;max-height:90vh;overflow-y:auto;position:relative;animation:springIn .5s cubic-bezier(.16,1,.3,1);}
-@keyframes springIn{from{opacity:0;transform:scale(.92) translateY(20px);}to{opacity:1;transform:none;}}
-.modal-close{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--testo-muted);font-size:1.5rem;cursor:pointer;z-index:1;width:36px;height:36px;display:flex;align-items:center;justify-content:center;transition:color .3s;}
-.modal-close:hover{color:var(--bianco);}
-.modal-img{width:100%;aspect-ratio:16/9;object-fit:cover;}
-.modal-body{padding:32px;}
-.modal-cat{font-family:var(--sans);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--oro);margin-bottom:8px;}
-.modal-name{font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--bianco);margin-bottom:12px;}
-.modal-desc{font-family:var(--body);font-size:.95rem;color:var(--testo-muted);line-height:1.7;margin-bottom:20px;}
-.modal-footer{display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(200,147,58,.15);padding-top:20px;}
-.modal-price{font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--oro);}
-.modal-allergens{display:flex;gap:8px;flex-wrap:wrap;}
-.allergen-tag{font-family:var(--sans);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid rgba(200,147,58,.3);color:var(--testo-muted);padding:4px 10px;}
-.modal-cta{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;background:var(--oro);color:var(--nero);padding:14px 28px;text-decoration:none;margin-top:24px;position:relative;overflow:hidden;transition:transform .15s;}
-.modal-cta::after{content:'';position:absolute;inset:0;background:var(--oro-chiaro);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.16,1,.3,1);}
-.modal-cta:hover::after{transform:scaleX(1);}
-.modal-cta:hover{transform:none;}
-.modal-cta span{position:relative;z-index:1;}
-.modal-cta:active{transform:scale(.97);}
-
-/* ===== ATMOSFERA HERO IMAGE ===== */
-#atmosfera{position:relative;height:70vh;min-height:500px;overflow:hidden;}
-#atmosfera-bg{position:absolute;inset:0;}
-#atmosfera-bg img{width:100%;height:100%;object-fit:cover;}
-#atmosfera-overlay{position:absolute;inset:0;background:rgba(14,12,10,.55);}
-#atmosfera-content{position:relative;z-index:2;height:100%;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 40px;}
-.atmosfera-quote{font-family:var(--serif);font-size:clamp(1.6rem,4vw,3rem);font-style:italic;font-weight:400;color:var(--bianco);max-width:700px;line-height:1.4;}
-.atmosfera-quote em{color:var(--oro);}
-.atmosfera-source{font-family:var(--sans);font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--testo-muted);margin-top:20px;}
-
-/* ===== STORIA ===== */
-#storia{background:var(--nero);padding:120px 60px;}
-.storia-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:center;}
-.storia-img-wrap{position:relative;}
-.storia-img{width:100%;aspect-ratio:3/4;object-fit:cover;}
-.storia-img-accent{position:absolute;bottom:-20px;right:-20px;width:60%;aspect-ratio:1;object-fit:cover;border:4px solid var(--carbone);}
-.storia-badge{position:absolute;top:20px;left:-20px;background:var(--oro);padding:20px;text-align:center;}
-.storia-badge-year{font-family:var(--serif);font-size:2rem;font-weight:900;color:var(--nero);}
-.storia-badge-label{font-family:var(--sans);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(0,0,0,.6);}
-.storia-eyebrow{font-family:var(--sans);font-size:.65rem;letter-spacing:.4em;text-transform:uppercase;color:var(--oro);margin-bottom:16px;}
-.storia-title{font-family:var(--serif);font-size:clamp(2rem,3.5vw,3rem);font-weight:700;color:var(--bianco);margin-bottom:24px;line-height:1.1;}
-.storia-body{font-family:var(--body);font-size:.95rem;line-height:1.9;color:var(--testo-muted);}
-.storia-body p+p{margin-top:16px;}
-.storia-highlight{font-family:var(--serif);font-size:1.15rem;font-style:italic;color:var(--crema);border-left:2px solid var(--oro);padding-left:20px;margin:28px 0;}
-
-/* ===== ANTIPASTI ===== */
-#antipasti{background:var(--carbone);padding:100px 60px;}
-.antipasti-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;max-width:1100px;margin:0 auto;}
-.antipasto-item{background:var(--cenere);overflow:hidden;}
-.antipasto-img{width:100%;aspect-ratio:1;object-fit:cover;transition:transform .6s cubic-bezier(.16,1,.3,1);}
-.antipasto-item:hover .antipasto-img{transform:scale(1.05);}
-.antipasto-info{padding:24px;}
-.antipasto-name{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--bianco);margin-bottom:6px;}
-.antipasto-desc{font-family:var(--body);font-size:.82rem;color:var(--testo-muted);line-height:1.5;margin-bottom:12px;}
-.antipasto-price{font-family:var(--sans);font-size:1rem;font-weight:600;color:var(--oro);}
-
-/* ===== CTA SECTION ===== */
-#prenota{background:var(--nero);padding:100px 60px;text-align:center;}
-.prenota-eyebrow{font-family:var(--sans);font-size:.65rem;letter-spacing:.4em;text-transform:uppercase;color:var(--oro);margin-bottom:16px;}
-.prenota-title{font-family:var(--serif);font-size:clamp(2rem,4vw,4rem);font-weight:900;color:var(--bianco);margin-bottom:12px;}
-.prenota-title em{color:var(--oro);font-style:italic;}
-.prenota-sub{font-family:var(--body);font-size:1rem;color:var(--testo-muted);margin-bottom:48px;max-width:500px;margin-left:auto;margin-right:auto;}
-.prenota-phone{font-family:var(--serif);font-size:clamp(2rem,5vw,4.5rem);font-weight:900;color:var(--oro);text-decoration:none;display:block;margin-bottom:20px;transition:letter-spacing .3s;}
-.prenota-phone:hover{letter-spacing:.04em;}
-.prenota-note{font-family:var(--sans);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--testo-muted);}
-
-/* ===== MAPPA + ORARI ===== */
-#dove{background:var(--carbone);padding:100px 60px;}
-.dove-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;max-width:1200px;margin:0 auto;align-items:start;}
-.orari-block{margin-top:40px;}
-.orari-title{font-family:var(--sans);font-size:.65rem;letter-spacing:.4em;text-transform:uppercase;color:var(--oro);margin-bottom:20px;}
-.orari-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid rgba(200,147,58,.1);}
-.orari-day{font-family:var(--sans);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--testo-muted);}
-.orari-time{font-family:var(--serif);font-size:1rem;color:var(--bianco);}
-.orari-closed{color:var(--testo-muted);font-style:italic;}
-.info-block{margin-top:32px;}
-.info-item{display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid rgba(200,147,58,.1);}
-.info-icon{width:20px;height:20px;color:var(--oro);flex-shrink:0;margin-top:2px;}
-.info-text{font-family:var(--body);font-size:.9rem;color:var(--testo-muted);line-height:1.6;}
-.info-text a{color:var(--oro);text-decoration:none;}
-.info-text a:hover{text-decoration:underline;}
-.map-wrap{height:380px;overflow:hidden;}
-.map-wrap iframe{width:100%;height:100%;border:none;filter:grayscale(80%) invert(95%) hue-rotate(180deg);}
-
-/* ===== FOOTER ===== */
-footer{background:var(--nero);padding:60px 60px 30px;border-top:1px solid rgba(200,147,58,.1);}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:60px;margin-bottom:50px;}
-.footer-brand{font-family:var(--serif);font-size:1.6rem;font-weight:700;color:var(--crema);margin-bottom:12px;}
-.footer-brand em{color:var(--oro);font-style:italic;}
-.footer-tagline{font-family:var(--body);font-size:.85rem;color:var(--testo-muted);line-height:1.7;max-width:280px;}
-.footer-nav-title{font-family:var(--sans);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--oro);margin-bottom:16px;}
-.footer-nav a{display:block;font-family:var(--sans);font-size:.85rem;color:var(--testo-muted);text-decoration:none;padding:4px 0;transition:color .3s;}
-.footer-nav a:hover{color:var(--crema);}
-.footer-social{display:flex;gap:12px;margin-top:20px;}
-.social-link{width:36px;height:36px;border:1px solid rgba(200,147,58,.3);display:flex;align-items:center;justify-content:center;transition:border-color .3s,background .3s;}
-.social-link:hover{border-color:var(--oro);background:rgba(200,147,58,.1);}
-.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:30px;border-top:1px solid rgba(200,147,58,.08);}
-.footer-copy{font-family:var(--sans);font-size:.7rem;color:var(--testo-muted);letter-spacing:.05em;}
-.footer-policy{font-family:var(--sans);font-size:.7rem;color:var(--testo-muted);text-decoration:none;transition:color .3s;}
-.footer-policy:hover{color:var(--oro);}
-
-/* ===== STICKY MOBILE CTA ===== */
-.sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:900;background:var(--oro);padding:16px;text-align:center;}
-.sticky-cta a{font-family:var(--sans);font-size:.9rem;letter-spacing:.15em;text-transform:uppercase;color:var(--nero);text-decoration:none;font-weight:600;}
-
-/* ===== SCROLL REVEAL ===== */
-.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1);}
-.reveal.visible{opacity:1;transform:none;}
-.reveal-delay-1{transition-delay:.1s;}
-.reveal-delay-2{transition-delay:.2s;}
-.reveal-delay-3{transition-delay:.3s;}
-.reveal-delay-4{transition-delay:.4s;}
-
-/* ===== COOKIE BANNER ===== */
-#cookie-banner{position:fixed;bottom:24px;left:24px;right:24px;max-width:520px;background:var(--cenere);border:1px solid rgba(200,147,58,.2);padding:24px;z-index:3000;display:none;animation:slideIn .5s cubic-bezier(.16,1,.3,1);}
-@keyframes slideIn{from{transform:translateY(20px);opacity:0;}to{transform:none;opacity:1;}}
-.cookie-text{font-family:var(--body);font-size:.82rem;color:var(--testo-muted);line-height:1.6;margin-bottom:16px;}
-.cookie-text a{color:var(--oro);}
-.cookie-btns{display:flex;gap:12px;}
-.cookie-btn{font-family:var(--sans);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:10px 18px;cursor:pointer;border:none;transition:all .2s;}
-.cookie-accept{background:var(--oro);color:var(--nero);}
-.cookie-minimal{background:transparent;color:var(--testo-muted);border:1px solid rgba(200,147,58,.2);}
-.cookie-minimal:hover{color:var(--crema);}
-
-/* ===== PRIVACY MODAL ===== */
-#privacy-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:4000;align-items:center;justify-content:center;padding:20px;}
-#privacy-modal.open{display:flex;}
-.privacy-content{background:var(--carbone);max-width:700px;width:100%;max-height:85vh;overflow-y:auto;padding:40px;position:relative;}
-.privacy-content h2{font-family:var(--serif);font-size:1.8rem;color:var(--bianco);margin-bottom:20px;}
-.privacy-content h3{font-family:var(--sans);font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;color:var(--oro);margin:24px 0 8px;}
-.privacy-content p{font-family:var(--body);font-size:.85rem;color:var(--testo-muted);line-height:1.7;margin-bottom:12px;}
-.privacy-close-btn{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--testo-muted);font-size:1.5rem;cursor:pointer;}
-
-/* ===== LANG ===== */
-[data-lang="en"]{display:none;}
-body.lang-en [data-lang="it"]{display:none!important;}
-body.lang-en [data-lang="en"]{display:revert!important;}
-body.lang-en span[data-lang="en"]{display:inline!important;}
-body.lang-en div[data-lang="en"]{display:block!important;}
-body.lang-en a[data-lang="en"]{display:block!important;}
-body.lang-en p[data-lang="en"]{display:block!important;}
-
-/* ===== RESPONSIVE ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--black:#0a0a08;--off-white:#f5f0e8;--warm-white:#faf7f2;--red:#c8382a;--red-dark:#a02e22;--gold:#c9963a;--gray:#888074;--font-display:'Bebas Neue',sans-serif;--font-serif:'Playfair Display',serif;--font-body:'DM Sans',sans-serif}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{background:var(--black);color:var(--off-white);font-family:var(--font-body);font-weight:300;overflow-x:hidden;cursor:none}
+.cursor{position:fixed;width:8px;height:8px;background:var(--red);border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:width .2s,height .2s}
+.cursor-follower{position:fixed;width:36px;height:36px;border:1px solid rgba(245,240,232,.4);border-radius:50%;pointer-events:none;z-index:99998;transform:translate(-50%,-50%);transition:width .3s,height .3s,border-color .3s}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9997}
+[data-lang="en"]{display:none!important}
+body.lang-en [data-lang="it"]{display:none!important}
+body.lang-en [data-lang="en"]{display:inline!important}
+[data-lang-block="en"]{display:none!important}
+[data-lang-block="it"]{display:block!important}
+body.lang-en [data-lang-block="it"]{display:none!important}
+body.lang-en [data-lang-block="en"]{display:block!important}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:28px 48px;display:flex;justify-content:space-between;align-items:center;transition:all .4s}
+nav.scrolled{background:rgba(10,10,8,.94);backdrop-filter:blur(14px);padding:14px 48px}
+.nav-logo{font-family:var(--font-display);font-size:22px;letter-spacing:.08em;color:#fff}
+.nav-logo em{font-family:var(--font-serif);font-style:italic;font-size:26px}
+.nav-right{display:flex;align-items:center;gap:32px}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-family:var(--font-body);font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.7);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:#fff}
+.lang-toggle{display:flex;gap:2px}
+.lang-btn{background:none;border:none;font-family:var(--font-body);font-size:11px;font-weight:500;letter-spacing:.15em;color:rgba(255,255,255,.5);cursor:none;padding:4px 6px;transition:color .2s}
+.lang-btn.active{color:#fff;border-bottom:1px solid #fff}
+.nav-cta{font-family:var(--font-display);font-size:14px;letter-spacing:.12em;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.35);padding:8px 20px;transition:all .3s;position:relative;overflow:hidden}
+.nav-cta::before{content:'';position:absolute;inset:0;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.4,0,.2,1)}
+.nav-cta:hover::before{transform:scaleX(1)}
+.nav-cta span{position:relative;z-index:1}
+.hamburger{display:none;cursor:none;padding:4px}
+#hero{position:relative;height:100svh;min-height:600px;overflow:hidden;display:flex;align-items:flex-end}
+.hero-bg{position:absolute;inset:-8%;background:url('https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=1800&q=80&fit=crop') center center/cover no-repeat;will-change:transform}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(175deg,rgba(10,10,8,.05) 0%,rgba(10,10,8,.25) 35%,rgba(10,10,8,.88) 100%)}
+.hero-content{position:relative;z-index:2;padding:0 48px 80px;width:100%}
+.hero-eyebrow{font-family:var(--font-body);font-size:11px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:rgba(245,240,232,.6);margin-bottom:20px;overflow:hidden;height:18px}
+.hero-eyebrow span{display:block;transform:translateY(100%)}
+.hero-title{font-family:var(--font-display);font-size:clamp(72px,13vw,190px);line-height:.88;letter-spacing:.02em;text-transform:uppercase;margin-bottom:0}
+.line-wrap{overflow:hidden;display:block}
+.hero-line{display:block;transform:translateY(105%)}
+.hero-italic{font-family:var(--font-serif);font-style:italic;font-size:.62em;color:var(--red);display:block;transform:translateY(105%);line-height:1.1;margin-top:4px}
+.hero-bottom{display:flex;justify-content:space-between;align-items:flex-end;margin-top:36px;flex-wrap:wrap;gap:24px}
+.hero-sub{font-family:var(--font-body);font-size:clamp(14px,1.4vw,17px);font-weight:300;color:rgba(245,240,232,.75);line-height:1.7;max-width:440px;overflow:hidden;height:auto}
+.hero-sub-inner{transform:translateY(100%)}
+.hero-cta-wrap{opacity:0;transform:translateY(40px)}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-display);font-size:15px;letter-spacing:.12em;background:var(--red);color:#fff;padding:14px 28px;text-decoration:none;position:relative;overflow:hidden;transition:color .3s}
+.btn-primary::before{content:'';position:absolute;inset:0;background:var(--red-dark);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.4,0,.2,1)}
+.btn-primary:hover::before{transform:scaleX(1)}
+.btn-primary span{position:relative;z-index:1}
+.btn-primary:active{transform:scale(.97)}
+.hero-scroll{position:absolute;bottom:32px;right:48px;display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0}
+.hero-scroll span{font-family:var(--font-body);font-size:9px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:rgba(245,240,232,.4);writing-mode:vertical-rl}
+.hero-scroll-bar{width:1px;height:60px;background:linear-gradient(to bottom,rgba(245,240,232,.5),transparent)}
+#segreto{background:var(--off-white);color:var(--black);padding:120px 48px;position:relative;overflow:hidden}
+.segreto-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1200px;margin:0 auto}
+.segreto-eyebrow{font-family:var(--font-body);font-size:11px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--red);margin-bottom:20px}
+.segreto-title{font-family:var(--font-display);font-size:clamp(52px,7vw,100px);line-height:.88;letter-spacing:.02em;text-transform:uppercase;margin-bottom:32px}
+.segreto-title em{font-family:var(--font-serif);font-style:italic;color:var(--red)}
+.segreto-body{font-family:var(--font-body);font-size:16px;font-weight:300;line-height:1.85;color:#444;margin-bottom:18px}
+.segreto-bg-num{position:absolute;font-family:var(--font-display);font-size:clamp(180px,28vw,420px);color:var(--black);opacity:.04;line-height:1;top:50%;left:-30px;transform:translateY(-50%);pointer-events:none}
+.segreto-stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:48px;border-top:1px solid rgba(0,0,0,.1)}
+.stat{padding:20px 0;border-right:1px solid rgba(0,0,0,.1)}
+.stat:last-child{border-right:none}
+.stat-num{font-family:var(--font-display);font-size:clamp(32px,4vw,50px);color:var(--red);line-height:1;margin-bottom:4px}
+.stat-label{font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gray)}
+.segreto-right{position:relative;height:580px}
+.segreto-img-main{position:absolute;top:0;right:0;width:82%;height:75%;object-fit:cover}
+.segreto-img-float{position:absolute;bottom:0;left:0;width:52%;height:52%;object-fit:cover;border:6px solid var(--off-white);box-shadow:0 20px 60px rgba(0,0,0,.15)}
+.segreto-accent-line{position:absolute;top:40px;right:-16px;width:3px;height:52%;background:var(--red)}
+#menu{background:var(--black);padding:120px 48px;position:relative}
+.menu-header{max-width:1200px;margin:0 auto 56px;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px}
+.menu-eyebrow{font-family:var(--font-body);font-size:11px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+.menu-title{font-family:var(--font-display);font-size:clamp(52px,7vw,96px);line-height:.88;text-transform:uppercase;color:var(--off-white)}
+.menu-title em{font-family:var(--font-serif);font-style:italic;color:var(--red)}
+.menu-subtitle{font-family:var(--font-body);font-size:14px;font-weight:300;color:rgba(245,240,232,.45);max-width:300px;line-height:1.7}
+.menu-tabs{display:flex;gap:4px;max-width:1200px;margin:0 auto 36px;flex-wrap:wrap}
+.menu-tab{font-family:var(--font-body);font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;padding:10px 18px;background:transparent;border:1px solid rgba(245,240,232,.15);color:rgba(245,240,232,.4);cursor:none;transition:all .25s}
+.menu-tab:hover{border-color:rgba(245,240,232,.4);color:rgba(245,240,232,.7)}
+.menu-tab.active{background:var(--red);border-color:var(--red);color:#fff}
+.menu-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+.menu-card{position:relative;overflow:hidden;cursor:none;aspect-ratio:4/3}
+.menu-card-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.4,0,.2,1),filter .4s;filter:brightness(.72) saturate(.8)}
+.menu-card:hover .menu-card-img{transform:scale(1.07);filter:brightness(.88) saturate(1.1)}
+.menu-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,8,.95) 0%,transparent 65%);padding:20px 18px 18px;display:flex;flex-direction:column;justify-content:flex-end}
+.menu-card-cat{font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.menu-card-name{font-family:var(--font-serif);font-size:clamp(15px,2vw,19px);font-weight:700;color:var(--off-white);line-height:1.2;margin-bottom:6px}
+.menu-card-price{font-family:var(--font-display);font-size:20px;color:var(--red)}
+.menu-card-plus{position:absolute;top:12px;right:12px;width:32px;height:32px;background:rgba(245,240,232,.1);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;transition:background .2s}
+.menu-card:hover .menu-card-plus{background:var(--red)}
+.menu-card-plus svg{width:12px;height:12px;stroke:#fff;stroke-width:2;fill:none}
+.modal-overlay{position:fixed;inset:0;z-index:2000;display:flex;align-items:flex-end;justify-content:center;background:rgba(10,10,8,0);transition:background .4s;pointer-events:none}
+.modal-overlay.open{background:rgba(10,10,8,.82);pointer-events:all}
+.modal-box{background:var(--warm-white);width:100%;max-width:540px;max-height:90svh;overflow-y:auto;transform:translateY(100%);transition:transform .6s cubic-bezier(.16,1,.3,1);position:relative}
+.modal-overlay.open .modal-box{transform:translateY(0)}
+.modal-img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.modal-close{position:absolute;top:14px;right:14px;width:36px;height:36px;background:rgba(10,10,8,.6);border:none;cursor:none;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(8px);transition:background .2s}
+.modal-close:hover{background:var(--red)}
+.modal-close svg{width:14px;height:14px;stroke:#fff;stroke-width:2;fill:none}
+.modal-body{padding:24px 24px 36px;color:var(--black)}
+.modal-cat{font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--red);margin-bottom:6px}
+.modal-title{font-family:var(--font-serif);font-size:clamp(22px,4vw,32px);font-weight:700;line-height:1.1;margin-bottom:10px}
+.modal-desc{font-family:var(--font-body);font-size:14px;font-weight:300;line-height:1.75;color:#555;margin-bottom:18px}
+.modal-price{font-family:var(--font-display);font-size:30px;color:var(--red);margin-bottom:14px}
+.modal-allergens{display:flex;flex-wrap:wrap;gap:6px}
+.allergen-tag{font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;background:rgba(10,10,8,.06);color:var(--gray)}
+#rec-section{position:relative;height:65vh;min-height:400px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.rec-bg{position:absolute;inset:-8%;background:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1800&q=80&fit=crop') center/cover no-repeat;will-change:transform}
+.rec-overlay{position:absolute;inset:0;background:rgba(10,10,8,.72)}
+.rec-content{position:relative;z-index:2;text-align:center;padding:0 48px;max-width:880px}
+.rec-quote{font-family:var(--font-serif);font-style:italic;font-size:clamp(20px,3vw,40px);line-height:1.45;color:var(--off-white);margin-bottom:22px}
+.rec-quote strong{color:var(--red);font-style:normal}
+.rec-author{font-family:var(--font-body);font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:rgba(245,240,232,.45)}
+#storia{background:var(--off-white);color:var(--black);padding:120px 48px;position:relative;overflow:hidden}
+.storia-inner{max-width:1200px;margin:0 auto}
+.storia-top{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-bottom:72px}
+.storia-eyebrow{font-family:var(--font-body);font-size:11px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--red);margin-bottom:18px}
+.storia-title{font-family:var(--font-display);font-size:clamp(52px,7vw,96px);line-height:.88;text-transform:uppercase;margin-bottom:28px}
+.storia-title em{font-family:var(--font-serif);font-style:italic;color:var(--red)}
+.storia-body{font-family:var(--font-body);font-size:16px;font-weight:300;line-height:1.85;color:#444;margin-bottom:20px}
+.storia-blockquote{font-family:var(--font-serif);font-style:italic;font-size:clamp(17px,2.2vw,24px);line-height:1.5;color:var(--black);border-left:3px solid var(--red);padding-left:22px;margin:32px 0}
+.storia-bg-year{position:absolute;font-family:var(--font-display);font-size:clamp(180px,28vw,480px);color:var(--black);opacity:.04;line-height:1;bottom:-60px;right:-30px;pointer-events:none}
+.foto-strip{display:grid;grid-template-columns:2fr 1fr 1fr;gap:4px;height:460px}
+.foto-item{overflow:hidden}
+.foto-item img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.4,0,.2,1)}
+.foto-item:hover img{transform:scale(1.04)}
+#dove{background:var(--black);padding:120px 48px}
+.dove-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.dove-eyebrow{font-family:var(--font-body);font-size:11px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--red);margin-bottom:18px}
+.dove-title{font-family:var(--font-display);font-size:clamp(52px,7vw,96px);line-height:.88;text-transform:uppercase;color:var(--off-white);margin-bottom:40px}
+.dove-title em{font-family:var(--font-serif);font-style:italic;color:var(--red)}
+.dove-phone{font-family:var(--font-display);font-size:clamp(28px,4.5vw,52px);color:var(--off-white);text-decoration:none;display:block;margin-bottom:14px;transition:color .2s;letter-spacing:.02em}
+.dove-phone:hover{color:var(--red)}
+.dove-address{font-family:var(--font-body);font-size:15px;font-weight:300;color:rgba(245,240,232,.55);line-height:1.75;margin-bottom:20px}
+.dove-maps{font-family:var(--font-body);font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--red);text-decoration:none;border-bottom:1px solid var(--red);padding-bottom:2px;transition:opacity .2s}
+.dove-maps:hover{opacity:.7}
+.orari-table{width:100%;border-collapse:collapse;margin-top:36px}
+.orari-table tr{border-bottom:1px solid rgba(245,240,232,.07)}
+.orari-table td{padding:13px 0;font-family:var(--font-body);font-size:14px}
+.orari-table td:first-child{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gray)}
+.orari-table td:last-child{text-align:right;color:rgba(245,240,232,.65)}
+.map-wrap{width:100%;aspect-ratio:4/3;overflow:hidden}
+.map-wrap iframe{width:100%;height:100%;border:none;filter:grayscale(25%) contrast(1.1) brightness(.88)}
+footer{background:var(--black);border-top:1px solid rgba(245,240,232,.05);padding:60px 48px 36px}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:48px;margin-bottom:44px}
+.footer-logo{font-family:var(--font-display);font-size:20px;letter-spacing:.08em;color:var(--off-white);margin-bottom:10px}
+.footer-logo em{font-family:var(--font-serif);font-style:italic;font-size:24px}
+.footer-desc{font-family:var(--font-body);font-size:13px;font-weight:300;color:rgba(245,240,232,.35);line-height:1.7}
+.footer-col-title{font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-links a{font-family:var(--font-body);font-size:13px;font-weight:300;color:rgba(245,240,232,.45);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--off-white)}
+.footer-bottom{max-width:1200px;margin:0 auto;border-top:1px solid rgba(245,240,232,.05);padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-copy{font-family:var(--font-body);font-size:11px;color:rgba(245,240,232,.22)}
+.footer-privacy{font-family:var(--font-body);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(245,240,232,.3);text-decoration:none;transition:color .2s;cursor:none}
+.footer-privacy:hover{color:var(--red)}
+.sticky-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:900;background:var(--red);padding:13px 24px}
+.sticky-call a{font-family:var(--font-display);font-size:14px;letter-spacing:.14em;color:#fff;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:10px}
+.cookie-banner{display:none;position:fixed;bottom:0;left:0;right:0;z-index:8000;background:var(--black);border-top:2px solid var(--red);padding:18px 32px}
+.cookie-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.cookie-text{font-family:var(--font-body);font-size:13px;font-weight:300;color:rgba(245,240,232,.65);line-height:1.6;max-width:660px}
+.cookie-text a{color:var(--red);text-decoration:underline;cursor:none}
+.cookie-btns{display:flex;gap:8px;flex-shrink:0}
+.cookie-btn{font-family:var(--font-body);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:9px 16px;cursor:none;transition:all .2s}
+.cbr{background:transparent;border:1px solid rgba(245,240,232,.22)!important;border:none;color:rgba(245,240,232,.45)}
+.cbr:hover{color:rgba(245,240,232,.9);border-color:rgba(245,240,232,.55)!important}
+.cba{background:var(--red);border:none;color:#fff}
+.cba:hover{background:var(--red-dark)}
+.privacy-modal{display:none;position:fixed;inset:0;z-index:9000;background:rgba(10,10,8,.88);overflow-y:auto;padding:40px 20px}
+.privacy-box{max-width:700px;margin:0 auto;background:var(--warm-white);padding:48px;position:relative;color:var(--black)}
+.privacy-close{position:absolute;top:18px;right:18px;background:none;border:1px solid rgba(10,10,8,.15);width:34px;height:34px;cursor:none;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.privacy-close:hover{background:var(--red);border-color:var(--red)}
+.privacy-close:hover svg{stroke:#fff}
+.privacy-close svg{width:13px;height:13px;stroke:var(--black);stroke-width:2;fill:none}
+.priv-ey{font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--red);margin-bottom:10px}
+.priv-title{font-family:var(--font-display);font-size:clamp(26px,4vw,42px);text-transform:uppercase;line-height:.92;margin-bottom:28px}
+.priv-title em{font-family:var(--font-serif);font-style:italic;color:var(--red)}
+.priv-st{font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--black);margin:22px 0 6px;border-top:1px solid rgba(10,10,8,.1);padding-top:18px}
+.priv-b{font-family:var(--font-body);font-size:13px;font-weight:300;line-height:1.75;color:#444}
+.priv-b a{color:var(--red)}
+.reveal{opacity:0;transform:translateY(36px)}
 @media(max-width:900px){
-  nav{padding:0 20px;height:60px;}
-  .mobile-menu{top:60px;}
-  .nav-links{display:none;}
-  .nav-cta{display:none;}
-  .nav-hamburger{display:flex;}
-  .mobile-menu{display:block;}
-  .hero-content{padding:0 24px 80px;}
-  .hero-badge{display:none;}
-  .manifesto-grid,.storia-inner,.dove-grid{grid-template-columns:1fr;}
-  .manifesto-stats{margin-top:20px;}
-  #manifesto,#storia,#dove,#menu,#antipasti,#prenota{padding:80px 24px;}
-  .footer-grid{grid-template-columns:1fr;}
-  .sticky-cta{display:block;}
-  .storia-img-accent,.storia-badge{display:none;}
-  .antipasti-grid{grid-template-columns:1fr;}
-  footer{padding-bottom:80px;}
-  #cookie-banner{bottom:80px;}
+  nav{padding:18px 24px}
+  nav.scrolled{padding:12px 24px}
+  .nav-links{display:none}
+  .hamburger{display:block}
+  .hero-content{padding:0 24px 64px}
+  .hero-bottom{flex-direction:column;align-items:flex-start}
+  #segreto,#menu,#storia,#dove,footer{padding:80px 24px}
+  .segreto-grid,.storia-top,.dove-inner,.footer-inner{grid-template-columns:1fr}
+  .segreto-right{height:380px}
+  .segreto-bg-num,.storia-bg-year{display:none}
+  .segreto-stats{grid-template-columns:repeat(2,1fr)}
+  .menu-header{flex-direction:column;align-items:flex-start}
+  .menu-grid{grid-template-columns:repeat(2,1fr)}
+  .foto-strip{grid-template-columns:1fr 1fr;height:280px}
+  .foto-item:last-child{display:none}
+  #rec-section{height:50vh}
+  .rec-content{padding:0 24px}
 }
-@media(max-width:600px){
-  .foto-row{flex-direction:column;}
-  .foto-item-tall{aspect-ratio:4/3;}
-  .menu-grid{grid-template-columns:1fr;}
-  .footer-bottom{flex-direction:column;gap:12px;text-align:center;}
+@media(max-width:580px){
+  .menu-grid{grid-template-columns:1fr}
+  .segreto-stats{grid-template-columns:repeat(2,1fr)}
+  .foto-strip{grid-template-columns:1fr;height:auto}
+  .foto-item{height:240px}
+  .foto-item:nth-child(n+2){display:none}
+  .sticky-call{display:block}
+  body{padding-bottom:54px}
+  .modal-box{max-width:100%}
+  .cookie-inner{flex-direction:column}
+  .footer-inner{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursorFollower"></div>
 
-<!-- NAVIGATION -->
-<nav id="main-nav">
-  <a href="#" class="nav-logo">Remo <em>a Testaccio</em></a>
+<div id="mobileMenu" style="display:none;position:fixed;inset:0;background:var(--black);z-index:1500;flex-direction:column;align-items:center;justify-content:center;gap:32px">
+  <div style="position:absolute;top:20px;right:20px;cursor:none" onclick="document.getElementById('mobileMenu').style.display='none'">
+    <svg width="24" height="24" stroke="white" fill="none" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </div>
+  <a href="#menu" onclick="document.getElementById('mobileMenu').style.display='none'" style="font-family:var(--font-display);font-size:52px;color:var(--off-white);text-decoration:none;letter-spacing:.05em"><span data-lang="it">Menù</span><span data-lang="en">Menu</span></a>
+  <a href="#storia" onclick="document.getElementById('mobileMenu').style.display='none'" style="font-family:var(--font-display);font-size:52px;color:var(--off-white);text-decoration:none;letter-spacing:.05em"><span data-lang="it">La Storia</span><span data-lang="en">Our Story</span></a>
+  <a href="#dove" onclick="document.getElementById('mobileMenu').style.display='none'" style="font-family:var(--font-display);font-size:52px;color:var(--off-white);text-decoration:none;letter-spacing:.05em"><span data-lang="it">Dove Siamo</span><span data-lang="en">Find Us</span></a>
+  <a href="tel:+390657462701" style="margin-top:16px;font-family:var(--font-display);font-size:26px;color:var(--red);letter-spacing:.08em;text-decoration:none">06 574 6270</a>
+</div>
+
+<nav id="navbar">
+  <div class="nav-logo">Remo <em>a Testaccio</em></div>
   <div class="nav-right">
-    <div class="nav-links">
-      <a href="#menu"><span data-lang="it">Menù</span><span data-lang="en">Menu</span></a>
-      <a href="#storia"><span data-lang="it">La Storia</span><span data-lang="en">Our Story</span></a>
-      <a href="#dove"><span data-lang="it">Dove Siamo</span><span data-lang="en">Find Us</span></a>
+    <ul class="nav-links">
+      <li><a href="#menu"><span data-lang="it">Menù</span><span data-lang="en">Menu</span></a></li>
+      <li><a href="#storia"><span data-lang="it">La Storia</span><span data-lang="en">Our Story</span></a></li>
+      <li><a href="#dove"><span data-lang="it">Dove Siamo</span><span data-lang="en">Find Us</span></a></li>
+    </ul>
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('it')">IT</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
     </div>
-    <!-- Lang switcher — SEMPRE VISIBILE desktop e mobile -->
-    <div class="lang-switcher">
-      <button class="lang-btn active" id="btn-it" onclick="setLang('it')">IT</button>
-      <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+    <a href="tel:+390657462701" class="nav-cta"><span><span data-lang="it">Chiama</span><span data-lang="en">Call Us</span></span></a>
+    <div class="hamburger" onclick="document.getElementById('mobileMenu').style.display='flex'">
+      <svg width="24" height="24" stroke="white" fill="none" stroke-width="1.5"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </div>
-    <a href="tel:+390657462701" class="nav-cta">
-      <span class="nav-cta-inner" data-lang="it">Chiama</span>
-      <span class="nav-cta-inner" data-lang="en">Call Us</span>
-    </a>
-    <!-- Hamburger mobile -->
-    <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
   </div>
 </nav>
 
-<!-- Mobile drawer -->
-<div class="mobile-menu" id="mobile-menu">
-  <a href="#menu" onclick="closeMenu()"><span data-lang="it">Menù</span><span data-lang="en">Menu</span></a>
-  <a href="#storia" onclick="closeMenu()"><span data-lang="it">La Storia</span><span data-lang="en">Our Story</span></a>
-  <a href="#antipasti" onclick="closeMenu()"><span data-lang="it">Antipasti</span><span data-lang="en">Starters</span></a>
-  <a href="#dove" onclick="closeMenu()"><span data-lang="it">Dove Siamo</span><span data-lang="en">Find Us</span></a>
-  <a href="tel:+390657462701" class="mobile-cta" onclick="closeMenu()">
-    <span data-lang="it">📞 06 574 6270 — Chiama</span>
-    <span data-lang="en">📞 06 574 6270 — Call</span>
-  </a>
-</div>
-
-<!-- HERO -->
 <section id="hero">
-  <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=1800&q=80&fit=crop" alt="Pizza romana sottile e croccante" loading="eager">
-  </div>
+  <div class="hero-bg" id="heroBg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">
-      <span data-lang="it">Testaccio, Roma · Dal 1960</span>
-      <span data-lang="en">Testaccio, Rome · Since 1960</span>
-    </div>
+    <div class="hero-eyebrow"><span id="heroEye"><span data-lang="it">Testaccio, Roma · Dal 1960</span><span data-lang="en">Testaccio, Rome · Since 1960</span></span></div>
     <h1 class="hero-title">
-      <span class="hero-title-line hero-name">Pizzeria da Remo</span>
-      <span class="hero-title-line hero-tagline-it" data-lang="it"><em>La pizza più sottile di Roma.</em></span>
-      <span class="hero-title-line hero-tagline-en" data-lang="en"><em>Rome's thinnest pizza.</em></span>
+      <span class="line-wrap"><span class="hero-line" id="hl1">Pizzeria</span></span>
+      <span class="line-wrap"><span class="hero-line" id="hl2">da Remo</span></span>
+      <span class="line-wrap"><span class="hero-italic" id="hl3"><span data-lang="it">La pizza più sottile di Roma.</span><span data-lang="en">Rome's thinnest pizza.</span></span></span>
     </h1>
-    <p class="hero-sub">
-      <span data-lang="it">Scrocchiarella, cotta a legna, nella piazza di Testaccio. Niente prenotazioni — arriva, dai il nome, aspetta. Ne vale sempre la pena.</span>
-      <span data-lang="en">Crispy, wood-fired, on the piazza in Testaccio. No reservations — arrive, give your name, wait. It's always worth it.</span>
-    </p>
-    <div class="hero-actions">
-      <a href="tel:+390657462701" class="cta-primary">
-        <span data-lang="it"><span>📞 06 574 6270</span></span>
-        <span data-lang="en"><span>📞 06 574 6270</span></span>
-      </a>
-      <a href="#menu" class="hero-scroll">
-        <span class="hero-scroll-line"></span>
-        <span data-lang="it">Vedi il menù</span>
-        <span data-lang="en">See the menu</span>
-      </a>
+    <div class="hero-bottom">
+      <div class="hero-sub"><div class="hero-sub-inner" id="heroSub"><span data-lang="it">Scrocchiarella, cotta a legna, nella piazza di Testaccio.<br>Niente prenotazioni — arriva, dai il nome, aspetta.<br>Ne vale sempre la pena.</span><span data-lang="en">Crispy, wood-fired, on the piazza in Testaccio.<br>No reservations — arrive, give your name, wait.<br>It's always worth it.</span></div></div>
+      <div class="hero-cta-wrap" id="heroCta">
+        <a href="tel:+390657462701" class="btn-primary"><span>📞 &nbsp;06 574 6270</span></a>
+      </div>
     </div>
   </div>
-  <div class="hero-badge">
-    <div class="hero-badge-ring">
-      <div class="hero-badge-inner">
-        <div class="hero-badge-num">★★★</div>
-        <div class="hero-badge-text">Time Out</div>
-        <div class="hero-badge-text">Roma</div>
+  <div class="hero-scroll" id="heroScroll">
+    <span data-lang="it">Scorri</span><span data-lang="en">Scroll</span>
+    <div class="hero-scroll-bar"></div>
+  </div>
+</section>
+
+<div style="height:80px;background:var(--off-white);clip-path:polygon(0 100%,100% 0,100% 100%)"></div>
+
+<section id="segreto">
+  <div class="segreto-grid">
+    <div style="position:relative">
+      <div class="segreto-bg-num">60</div>
+      <div style="position:relative;z-index:2">
+        <p class="segreto-eyebrow reveal"><span data-lang="it">Il Nostro Segreto</span><span data-lang="en">Our Secret</span></p>
+        <h2 class="segreto-title reveal"><span data-lang="it">Nessun trucco. Solo <em>impasto</em>, fuoco e tempo.</span><span data-lang="en">No tricks. Just <em>dough</em>, fire and time.</span></h2>
+        <p class="segreto-body reveal"><span data-lang="it">Da oltre 60 anni, ogni sera alle 19, accendiamo il forno a legna di Piazza Santa Maria Liberatrice. La ricetta non è cambiata. La fila fuori nemmeno.</span><span data-lang="en">For over 60 years, every evening at 7pm, we light the wood-fired oven on Piazza Santa Maria Liberatrice. The recipe hasn't changed. Neither has the queue.</span></p>
+        <p class="segreto-body reveal"><span data-lang="it">La pizza romana non è napoletana. È sottile come un foglio, bordo croccante, scrocchiarella al primo morso. Non si piega, non si alza — si spezza, e fa quel suono.</span><span data-lang="en">Roman pizza is not Neapolitan. It's thin as paper, crispy edge, crunchy at first bite. It doesn't fold, it doesn't rise — it snaps, and makes that sound.</span></p>
+        <div class="segreto-stats reveal">
+          <div class="stat"><div class="stat-num" data-counter="60" data-suffix="+">0</div><div class="stat-label"><span data-lang="it">Anni di storia</span><span data-lang="en">Years of history</span></div></div>
+          <div class="stat"><div class="stat-num" data-counter="44" data-special="rating">0</div><div class="stat-label"><span data-lang="it">Rating Google</span><span data-lang="en">Google Rating</span></div></div>
+          <div class="stat"><div class="stat-num" data-counter="10" data-prefix="€">0</div><div class="stat-label"><span data-lang="it">Pizza dal</span><span data-lang="en">Pizza from</span></div></div>
+          <div class="stat"><div class="stat-num" data-counter="1" data-suffix="am">0</div><div class="stat-label"><span data-lang="it">Aperti fino all'</span><span data-lang="en">Open until</span></div></div>
+        </div>
       </div>
+    </div>
+    <div class="segreto-right reveal" id="segRetoRight">
+      <div class="segreto-accent-line"></div>
+      <img class="segreto-img-main" loading="lazy" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=700&q=80&fit=crop" alt="Pizza romana margherita"/>
+      <img class="segreto-img-float" loading="lazy" src="https://images.unsplash.com/photo-1555072956-7758afb20e8f?w=500&q=80&fit=crop&crop=center" alt="Forno a legna romano"/>
     </div>
   </div>
 </section>
 
-<!-- DIVIDER -->
-<svg class="divider-svg" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="background:#0e0c0a;display:block;">
-  <path d="M0,0 L1440,0 L1440,60 Q720,0 0,60 Z" fill="#1a1714"/>
-</svg>
-
-<!-- MANIFESTO -->
-<section id="manifesto">
-  <div class="manifesto-grid">
-    <div class="reveal">
-      <div class="manifesto-label">
-        <span data-lang="it">Il Nostro Segreto</span>
-        <span data-lang="en">Our Secret</span>
-      </div>
-      <h2 class="manifesto-title">
-        <span data-lang="it">Nessun trucco.<br>Solo <em>impasto</em>,<br>fuoco e tempo.</span>
-        <span data-lang="en">No tricks.<br>Just <em>dough</em>,<br>fire and time.</span>
-      </h2>
-      <div class="manifesto-body">
-        <p data-lang="it">Da oltre 60 anni, ogni sera alle 19, accendiamo il forno a legna di Piazza Santa Maria Liberatrice. La ricetta non è cambiata. La fila fuori nemmeno.</p>
-        <p data-lang="en">For over 60 years, every evening at 7pm, we light the wood-fired oven on Piazza Santa Maria Liberatrice. The recipe hasn't changed. Neither has the queue.</p>
-        <p data-lang="it">La pizza romana non è napoletana. È sottile come un foglio, bordo croccante, scrocchiarella al primo morso. Non si piega, non si alza — si spezza, e fa quel suono.</p>
-        <p data-lang="en">Roman pizza is not Neapolitan. It's thin as paper, crispy edge, crunchy at first bite. It doesn't fold, it doesn't rise — it snaps, and makes that sound.</p>
-      </div>
-    </div>
-    <div class="manifesto-stats reveal reveal-delay-2">
-      <div class="stat-block">
-        <div class="stat-num">60+</div>
-        <div class="stat-label" data-lang="it">Anni di storia</div>
-        <div class="stat-label" data-lang="en">Years of history</div>
-      </div>
-      <div class="stat-block">
-        <div class="stat-num">★4.4</div>
-        <div class="stat-label" data-lang="it">5.000+ recensioni</div>
-        <div class="stat-label" data-lang="en">5,000+ reviews</div>
-      </div>
-      <div class="stat-block">
-        <div class="stat-num">€10</div>
-        <div class="stat-label" data-lang="it">Pizza dal </div>
-        <div class="stat-label" data-lang="en">Pizza from</div>
-      </div>
-      <div class="stat-block">
-        <div class="stat-num">6h</div>
-        <div class="stat-label" data-lang="it">Aperti fino all'1</div>
-        <div class="stat-label" data-lang="en">Open until 1am</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PHOTO STRIP -->
-<section id="foto-strip">
-  <div class="foto-row">
-    <div class="foto-item">
-      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80&fit=crop" alt="Pizza margherita romana" loading="lazy">
-    </div>
-    <div class="foto-item foto-item-tall">
-      <img src="https://images.unsplash.com/photo-1555072956-7758afb20e8f?w=600&q=80&fit=crop&crop=center" alt="Forno a legna Testaccio" loading="lazy">
-    </div>
-    <div class="foto-item">
-      <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&q=80&fit=crop" alt="Pizza romana cotta al forno" loading="lazy">
-    </div>
-    <div class="foto-item">
-      <img src="https://images.unsplash.com/photo-1506354666786-959d6d497f1a?w=600&q=80&fit=crop" alt="Atmosfera pizzeria romana" loading="lazy">
-    </div>
-  </div>
-</section>
-
-<!-- MENU -->
 <section id="menu">
-  <div class="section-header reveal">
-    <span class="section-eyebrow" data-lang="it">Il Menù</span>
-    <span class="section-eyebrow" data-lang="en">The Menu</span>
-    <h2 class="section-title">
-      <span data-lang="it">Semplice.<br><em>Come deve essere.</em></span>
-      <span data-lang="en">Simple.<br><em>As it should be.</em></span>
-    </h2>
-  </div>
-  <div class="menu-tabs reveal">
-    <button class="menu-tab active" onclick="switchTab('pizze', this)">
-      <span data-lang="it">Pizze</span><span data-lang="en">Pizzas</span>
-    </button>
-    <button class="menu-tab" onclick="switchTab('antipasti-tab', this)">
-      <span data-lang="it">Antipasti</span><span data-lang="en">Starters</span>
-    </button>
-    <button class="menu-tab" onclick="switchTab('dolci', this)">
-      <span data-lang="it">Dolci</span><span data-lang="en">Desserts</span>
-    </button>
-  </div>
-
-  <!-- PIZZE -->
-  <div class="menu-panel active" id="pizze">
-    <div class="menu-grid" id="menu-grid-pizze"></div>
-  </div>
-  <!-- ANTIPASTI TAB -->
-  <div class="menu-panel" id="antipasti-tab">
-    <div class="menu-grid" id="menu-grid-antipasti"></div>
-  </div>
-  <!-- DOLCI TAB -->
-  <div class="menu-panel" id="dolci">
-    <div class="menu-grid" id="menu-grid-dolci"></div>
-  </div>
-</section>
-
-<!-- ATMOSFERA -->
-<section id="atmosfera">
-  <div id="atmosfera-bg">
-    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1800&q=80&fit=crop" alt="Atmosfera pizzeria Testaccio" loading="lazy">
-  </div>
-  <div id="atmosfera-overlay"></div>
-  <div id="atmosfera-content">
+  <div class="menu-header">
     <div>
-      <p class="atmosfera-quote">
-        <span data-lang="it">"<em>Best pizza I've ever had.</em> Might not look amazing in pics, but truly a gem — filled with locals."</span>
-        <span data-lang="en">"<em>Best pizza I've ever had.</em> Might not look amazing in pics, but truly a gem — filled with locals."</span>
-      </p>
-      <p class="atmosfera-source">— Miles P, Google Reviews</p>
+      <p class="menu-eyebrow reveal"><span data-lang="it">Il Menù</span><span data-lang="en">The Menu</span></p>
+      <h2 class="menu-title reveal"><span data-lang="it">Semplice.<br><em>Come deve essere.</em></span><span data-lang="en">Simple.<br><em>As it should be.</em></span></h2>
     </div>
+    <p class="menu-subtitle reveal"><span data-lang="it">Poche cose, fatte bene. Da sessant'anni lo stesso menù — perché non c'è niente da correggere.</span><span data-lang="en">A few things, done right. Sixty years, same menu — nothing to fix.</span></p>
+  </div>
+  <div class="menu-tabs" id="menuTabs">
+    <button class="menu-tab active" data-cat="tutti"><span data-lang="it">Tutti</span><span data-lang="en">All</span></button>
+    <button class="menu-tab" data-cat="pizze"><span data-lang="it">Pizze</span><span data-lang="en">Pizzas</span></button>
+    <button class="menu-tab" data-cat="antipasti"><span data-lang="it">Antipasti</span><span data-lang="en">Starters</span></button>
+    <button class="menu-tab" data-cat="dolci">Dolci</button>
+  </div>
+  <div class="menu-grid" id="menuGrid"></div>
+</section>
+
+<section id="rec-section">
+  <div class="rec-bg" id="recBg"></div>
+  <div class="rec-overlay"></div>
+  <div class="rec-content">
+    <p class="rec-quote reveal">"<strong><span data-lang="it">La miglior pizza che abbia mai mangiato.</span><span data-lang="en">Best pizza I've ever had.</span></strong> <span data-lang="it">Potrebbe non sembrare straordinaria nelle foto, ma è davvero un gioiello — piena di romani.</span><span data-lang="en">Might not look amazing in pics, but truly a gem — filled with locals.</span>"</p>
+    <p class="rec-author reveal">— Miles P, Google Reviews ★★★★★</p>
   </div>
 </section>
 
-<!-- STORIA -->
 <section id="storia">
   <div class="storia-inner">
-    <div class="storia-img-wrap reveal">
-      <img class="storia-img" src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=700&q=80&fit=crop" alt="Forno a legna della pizzeria" loading="lazy">
-      <img class="storia-img-accent" src="https://images.unsplash.com/photo-1601924582970-9238bcb495d9?w=400&q=80&fit=crop" alt="Pizzaiolo al lavoro" loading="lazy">
-      <div class="storia-badge">
-        <div class="storia-badge-year">1960</div>
-        <div class="storia-badge-label">Roma, Testaccio</div>
+    <div class="storia-top">
+      <div>
+        <p class="storia-eyebrow reveal"><span data-lang="it">La Nostra Storia</span><span data-lang="en">Our Story</span></p>
+        <h2 class="storia-title reveal"><span data-lang="it">Un quartiere autentico.<br><em>Una pizza onesta.</em></span><span data-lang="en">An authentic quarter.<br><em>An honest pizza.</em></span></h2>
+      </div>
+      <div>
+        <p class="storia-body reveal"><span data-lang="it">Testaccio non è mai stato un quartiere per i turisti. È il quartiere dei romani — del mattatoio, dei mercati, della gente che sa cosa vuole. Remo è nato qui, e qui è rimasto.</span><span data-lang="en">Testaccio was never a neighbourhood for tourists. It belongs to Romans — the old slaughterhouse, the markets, the people who know what they want. Remo was born here, and here it stayed.</span></p>
+        <blockquote class="storia-blockquote reveal"><span data-lang="it">"Non prenotiamo. Venite — se c'è da aspettare, date il vostro nome. Siamo veloci."</span><span data-lang="en">"We don't take reservations. Come — if you have to wait, give your name. We're fast."</span></blockquote>
+        <p class="storia-body reveal"><span data-lang="it">L'impasto è lo stesso di sessant'anni fa. Il forno a legna è lo stesso. I tavoli non sono cambiati. Le tovaglie di carta e la lista in mano — quella la scrivi tu. La fila fuori, la sera, è la prova che alcune cose non hanno bisogno di essere migliorate.</span><span data-lang="en">The dough is the same as sixty years ago. The wood oven is the same. The tables haven't changed. The paper tablecloths and the order slip — you fill that in yourself. The queue outside every evening is proof that some things don't need improving.</span></p>
       </div>
     </div>
-    <div class="reveal reveal-delay-2">
-      <div class="storia-eyebrow">
-        <span data-lang="it">La Nostra Storia</span>
-        <span data-lang="en">Our Story</span>
-      </div>
-      <h2 class="storia-title">
-        <span data-lang="it">Un quartiere autentico.<br>Una pizza onesta.</span>
-        <span data-lang="en">An authentic quarter.<br>An honest pizza.</span>
-      </h2>
-      <div class="storia-body">
-        <p data-lang="it">Testaccio non è mai stato un quartiere per i turisti. È il quartiere dei romani — del mattatoio, dei mercati, della gente che sa cosa vuole. Remo è nato qui, e qui è rimasto.</p>
-        <p data-lang="en">Testaccio was never a neighbourhood for tourists. It belongs to Romans — the old slaughterhouse, the markets, the people who know what they want. Remo was born here, and here it stayed.</p>
-        <blockquote class="storia-highlight">
-          <span data-lang="it">"Non prenotiamo. Venite — se c'è da aspettare, date il vostro nome. Siamo veloci."</span>
-          <span data-lang="en">"We don't take reservations. Come — if you have to wait, give your name. We're fast."</span>
-        </blockquote>
-        <p data-lang="it">L'impasto è lo stesso di sessant'anni fa. Il forno a legna è lo stesso. I tavoli non sono cambiati. Le tovaglie di carta e la lista in mano — quella la scrivi tu.</p>
-        <p data-lang="en">The dough is the same as sixty years ago. The wood oven is the same. The tables haven't changed. The paper tablecloths and the order slip — you fill that in yourself.</p>
-        <p data-lang="it">La fila fuori, la sera, è la prova che alcune cose non hanno bisogno di essere migliorate.</p>
-        <p data-lang="en">The queue outside every evening is proof that some things don't need improving.</p>
-      </div>
+    <div class="foto-strip reveal" id="fotoStrip">
+      <div class="foto-item"><img loading="lazy" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&q=80&fit=crop" alt="Pizza romana cotta al forno"/></div>
+      <div class="foto-item"><img loading="lazy" src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=500&q=80&fit=crop" alt="Forno a legna"/></div>
+      <div class="foto-item"><img loading="lazy" src="https://images.unsplash.com/photo-1601924582970-9238bcb495d9?w=500&q=80&fit=crop" alt="Pizzaiolo al lavoro"/></div>
     </div>
+    <div class="storia-bg-year">1960</div>
   </div>
 </section>
 
-<!-- PRENOTA -->
-<section id="prenota">
-  <div class="reveal">
-    <div class="prenota-eyebrow">
-      <span data-lang="it">Vieni a Trovarci</span>
-      <span data-lang="en">Come Find Us</span>
-    </div>
-    <h2 class="prenota-title">
-      <span data-lang="it"><em>Chiama</em>, dai il nome,<br>siediti.</span>
-      <span data-lang="en"><em>Call</em>, give your name,<br>sit down.</span>
-    </h2>
-    <p class="prenota-sub">
-      <span data-lang="it">Non prenotiamo — ma chiamaci e ti diciamo quanto si aspetta. Arriva entro le 19.30 per entrare subito.</span>
-      <span data-lang="en">We don't take reservations — but call us and we'll tell you the wait time. Arrive by 7:30pm to walk right in.</span>
-    </p>
-    <a href="tel:+390657462701" class="prenota-phone">06 574 6270</a>
-    <p class="prenota-note">
-      <span data-lang="it">Piazza Santa Maria Liberatrice 44 · Testaccio · Roma</span>
-      <span data-lang="en">Piazza Santa Maria Liberatrice 44 · Testaccio · Rome</span>
-    </p>
-  </div>
-  <!-- UPGRADE: Reservation form goes here -->
-</section>
-
-<!-- DOVE SIAMO -->
 <section id="dove">
-  <div class="dove-grid">
-    <div class="reveal">
-      <span class="section-eyebrow" data-lang="it">Dove Siamo</span>
-      <span class="section-eyebrow" data-lang="en">Find Us</span>
-      <h2 class="section-title" style="text-align:left;margin-bottom:32px;">
-        <span data-lang="it">Piazza<br>Santa Maria<br><em>Liberatrice</em></span>
-        <span data-lang="en">Piazza<br>Santa Maria<br><em>Liberatrice</em></span>
-      </h2>
-      <div class="orari-block">
-        <div class="orari-title" data-lang="it">Orari di Apertura</div>
-        <div class="orari-title" data-lang="en">Opening Hours</div>
-        <div class="orari-row">
-          <span class="orari-day" data-lang="it">Lunedì – Sabato</span>
-          <span class="orari-day" data-lang="en">Monday – Saturday</span>
-          <span class="orari-time">19:00 – 01:00</span>
-        </div>
-        <div class="orari-row">
-          <span class="orari-day" data-lang="it">Domenica</span>
-          <span class="orari-day" data-lang="en">Sunday</span>
-          <span class="orari-time orari-closed" data-lang="it">Chiuso</span>
-          <span class="orari-time orari-closed" data-lang="en">Closed</span>
-        </div>
-        <div class="orari-row">
-          <span class="orari-day" data-lang="it">Agosto (3 settimane)</span>
-          <span class="orari-day" data-lang="en">August (3 weeks)</span>
-          <span class="orari-time orari-closed" data-lang="it">Chiuso</span>
-          <span class="orari-time orari-closed" data-lang="en">Closed</span>
-        </div>
-      </div>
-      <div class="info-block">
-        <div class="info-item">
-          <svg class="info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-          <div class="info-text">
-            Piazza Santa Maria Liberatrice 44<br>00153 Roma — Testaccio<br>
-            <a href="https://maps.google.com/?q=Pizzeria+Remo+Testaccio+Roma" target="_blank" rel="noopener noreferrer" data-lang="it">Apri in Google Maps →</a>
-            <a href="https://maps.google.com/?q=Pizzeria+Remo+Testaccio+Roma" target="_blank" rel="noopener noreferrer" data-lang="en">Open in Google Maps →</a>
-          </div>
-        </div>
-        <div class="info-item">
-          <svg class="info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-          <div class="info-text"><a href="tel:+390657462701">06 574 6270</a></div>
-        </div>
-        <div class="info-item">
-          <svg class="info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
-          <div class="info-text">
-            <span data-lang="it">Metro B — Piramide (5 min a piedi)</span>
-            <span data-lang="en">Metro B — Piramide (5 min walk)</span>
-          </div>
-        </div>
-      </div>
+  <div class="dove-inner">
+    <div>
+      <p class="dove-eyebrow reveal"><span data-lang="it">Vieni a Trovarci</span><span data-lang="en">Come Find Us</span></p>
+      <h2 class="dove-title reveal"><span data-lang="it">Piazza Santa Maria <em>Liberatrice</em></span><span data-lang="en">Piazza Santa Maria <em>Liberatrice</em></span></h2>
+      <a href="tel:+390657462701" class="dove-phone reveal">06 574 6270</a>
+      <p class="dove-address reveal">Piazza Santa Maria Liberatrice 44<br>00153 Roma — Testaccio</p>
+      <a href="https://maps.google.com/?q=Pizzeria+Remo+Testaccio+Roma" target="_blank" rel="noopener noreferrer" class="dove-maps reveal"><span data-lang="it">Apri in Google Maps →</span><span data-lang="en">Open in Google Maps →</span></a>
+      <table class="orari-table reveal" style="margin-top:36px">
+        <tr><td><span data-lang="it">Lunedì – Sabato</span><span data-lang="en">Monday – Saturday</span></td><td>19:00 – 01:00</td></tr>
+        <tr><td><span data-lang="it">Domenica</span><span data-lang="en">Sunday</span></td><td><span data-lang="it">Chiuso</span><span data-lang="en">Closed</span></td></tr>
+        <tr><td><span data-lang="it">Agosto (3 settimane)</span><span data-lang="en">August (3 weeks)</span></td><td><span data-lang="it">Chiuso</span><span data-lang="en">Closed</span></td></tr>
+      </table>
+      <p class="reveal" style="margin-top:18px;font-family:var(--font-body);font-size:13px;color:rgba(245,240,232,.35)">Metro B — Piramide (5 min a piedi / 5 min walk)</p>
     </div>
-    <div class="reveal reveal-delay-2">
+    <div class="reveal">
       <div class="map-wrap">
-        <!-- MAPS: incollare qui URL embed da Google Maps del locale -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.8120!2d12.47686!3d41.87858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1325809e88dcf12d%3A0x7f4e3c85df4f7c8a!2sPizzeria%20Remo%20a%20Testaccio!5e0!3m2!1sit!2sit!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- MAPS: incollare qui URL embed da Google Maps — Pizzeria Remo Testaccio -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.8!2d12.4780!3d41.8820!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13258a1234%3A0x5678!2sPiazza+Santa+Maria+Liberatrice+44%2C+00153+Roma!5e0!3m2!1sit!2sit" allowfullscreen loading="lazy" title="Remo a Testaccio — Mappa"></iframe>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <div class="footer-grid">
+  <div class="footer-inner">
     <div>
-      <div class="footer-brand">Remo <em>a Testaccio</em></div>
-      <p class="footer-tagline" data-lang="it">La pizza romana dal 1960. Sottile, scrocchiarella, cotta a legna. Piazza Santa Maria Liberatrice, Testaccio, Roma.</p>
-      <p class="footer-tagline" data-lang="en">Roman pizza since 1960. Thin, crispy, wood-fired. Piazza Santa Maria Liberatrice, Testaccio, Rome.</p>
-      <div class="footer-social">
-        <a href="https://www.instagram.com/remoatestaccio/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
-        </a>
-        <a href="https://www.facebook.com/p/pizzeria-Remo-a-testaccio-100063456734857/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
-          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-        </a>
-      </div>
+      <div class="footer-logo">Remo <em>a Testaccio</em></div>
+      <p class="footer-desc"><span data-lang="it">La pizza romana dal 1960. Sottile, scrocchiarella, cotta a legna. Piazza Santa Maria Liberatrice, Testaccio, Roma.</span><span data-lang="en">Roman pizza since 1960. Thin, crispy, wood-fired. Piazza Santa Maria Liberatrice, Testaccio, Rome.</span></p>
     </div>
     <div>
-      <div class="footer-nav-title" data-lang="it">Navigazione</div>
-      <div class="footer-nav-title" data-lang="en">Navigation</div>
-      <nav class="footer-nav">
-        <a href="#menu" data-lang="it">Il Menù</a>
-        <a href="#menu" data-lang="en">The Menu</a>
-        <a href="#storia" data-lang="it">La Storia</a>
-        <a href="#storia" data-lang="en">Our Story</a>
-        <a href="#dove" data-lang="it">Dove Siamo</a>
-        <a href="#dove" data-lang="en">Find Us</a>
-        <a href="#prenota" data-lang="it">Contatti</a>
-        <a href="#prenota" data-lang="en">Contact</a>
-      </nav>
+      <p class="footer-col-title"><span data-lang="it">Navigazione</span><span data-lang="en">Navigation</span></p>
+      <ul class="footer-links">
+        <li><a href="#menu"><span data-lang="it">Il Menù</span><span data-lang="en">The Menu</span></a></li>
+        <li><a href="#storia"><span data-lang="it">La Storia</span><span data-lang="en">Our Story</span></a></li>
+        <li><a href="#dove"><span data-lang="it">Dove Siamo</span><span data-lang="en">Find Us</span></a></li>
+      </ul>
     </div>
     <div>
-      <div class="footer-nav-title" data-lang="it">Info</div>
-      <div class="footer-nav-title" data-lang="en">Info</div>
-      <nav class="footer-nav">
-        <a href="tel:+390657462701">06 574 6270</a>
-        <a href="https://maps.google.com/?q=Piazza+Santa+Maria+Liberatrice+44+Roma" target="_blank" rel="noopener noreferrer" data-lang="it">Piazza S.M. Liberatrice 44</a>
-        <a href="https://maps.google.com/?q=Piazza+Santa+Maria+Liberatrice+44+Roma" target="_blank" rel="noopener noreferrer" data-lang="en">Piazza S.M. Liberatrice 44</a>
-        <span style="font-family:var(--sans);font-size:.85rem;color:var(--testo-muted);padding:4px 0;display:block;" data-lang="it">Lun–Sab: 19:00–01:00</span>
-        <span style="font-family:var(--sans);font-size:.85rem;color:var(--testo-muted);padding:4px 0;display:block;" data-lang="en">Mon–Sat: 7pm–1am</span>
-        <span style="font-family:var(--sans);font-size:.85rem;color:var(--testo-muted);padding:4px 0;display:block;" data-lang="it">Domenica: Chiuso</span>
-        <span style="font-family:var(--sans);font-size:.85rem;color:var(--testo-muted);padding:4px 0;display:block;" data-lang="en">Sunday: Closed</span>
-      </nav>
+      <p class="footer-col-title">Info</p>
+      <ul class="footer-links">
+        <li><a href="tel:+390657462701">06 574 6270</a></li>
+        <li><a href="https://maps.google.com/?q=Pizzeria+Remo+Testaccio" target="_blank" rel="noopener noreferrer">Piazza S.M. Liberatrice 44</a></li>
+        <li style="font-family:var(--font-body);font-size:13px;color:rgba(245,240,232,.35)"><span data-lang="it">Lun–Sab: 19:00–01:00</span><span data-lang="en">Mon–Sat: 7pm–1am</span></li>
+      </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <p class="footer-copy">© 2024 Remo a Testaccio. P.IVA: <!-- inserire P.IVA --> — Roma</p>
-    <a href="#" class="footer-policy" onclick="openPrivacy(event)">
-      <span data-lang="it">Privacy Policy & Cookie</span>
-      <span data-lang="en">Privacy Policy & Cookies</span>
-    </a>
+    <span class="footer-copy">© 2025 Remo a Testaccio · Piazza Santa Maria Liberatrice 44, Roma</span>
+    <a href="#" class="footer-privacy" onclick="openPrivacy();return false"><span data-lang="it">Privacy Policy & Cookie</span><span data-lang="en">Privacy Policy & Cookies</span></a>
   </div>
-  <!-- UPGRADE: Email capture popup goes here -->
-  <!-- UPGRADE: Chatbot widget script goes here -->
 </footer>
 
-<!-- STICKY MOBILE CTA -->
-<div class="sticky-cta">
-  <a href="tel:+390657462701">
-    <span data-lang="it">📞 Chiama: 06 574 6270</span>
-    <span data-lang="en">📞 Call: 06 574 6270</span>
-  </a>
-</div>
+<div class="sticky-call"><a href="tel:+390657462701">📞 &nbsp;<span data-lang="it">Chiama: 06 574 6270</span><span data-lang="en">Call: 06 574 6270</span></a></div>
 
-<!-- MODAL -->
-<div id="modal-overlay" onclick="closeModal(event)">
-  <div class="modal" id="modal-content">
-    <button class="modal-close" onclick="closeModal()">&times;</button>
-    <img class="modal-img" id="modal-img" src="" alt="">
+<div class="modal-overlay" id="menuModal">
+  <div class="modal-box">
+    <img class="modal-img" id="modalImg" src="" alt="" loading="lazy"/>
+    <button class="modal-close" id="modalClose"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
     <div class="modal-body">
-      <div class="modal-cat" id="modal-cat"></div>
-      <h3 class="modal-name" id="modal-name"></h3>
-      <p class="modal-desc" id="modal-desc"></p>
-      <div class="modal-footer">
-        <div class="modal-price" id="modal-price"></div>
-        <div class="modal-allergens" id="modal-allergens"></div>
-      </div>
-      <a href="tel:+390657462701" class="modal-cta">
-        <span data-lang="it"><span>📞 Chiama per Prenotare</span></span>
-        <span data-lang="en"><span>📞 Call to Reserve</span></span>
-      </a>
+      <div class="modal-cat" id="modalCat"></div>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <p class="modal-desc" id="modalDesc"></p>
+      <div class="modal-price" id="modalPrice"></div>
+      <div class="modal-allergens" id="modalAllergens"></div>
     </div>
   </div>
 </div>
 
-<!-- COOKIE BANNER -->
-<div id="cookie-banner">
-  <p class="cookie-text">
-    <span data-lang="it">Utilizziamo cookie tecnici e, con il tuo consenso, Google Analytics (GA4) per migliorare la tua esperienza. Leggi la nostra <a href="#" onclick="openPrivacy(event)">Privacy Policy</a>.</span>
-    <span data-lang="en">We use technical cookies and, with your consent, Google Analytics (GA4) to improve your experience. Read our <a href="#" onclick="openPrivacy(event)">Privacy Policy</a>.</span>
-  </p>
-  <div class="cookie-btns">
-    <button class="cookie-btn cookie-accept" onclick="acceptCookies(true)">
-      <span data-lang="it">Accetta tutti</span>
-      <span data-lang="en">Accept all</span>
-    </button>
-    <button class="cookie-btn cookie-minimal" onclick="acceptCookies(false)">
-      <span data-lang="it">Solo necessari</span>
-      <span data-lang="en">Essential only</span>
-    </button>
-  </div>
-</div>
-
-<!-- PRIVACY MODAL -->
-<div id="privacy-modal">
-  <div class="privacy-content">
-    <button class="privacy-close-btn" onclick="document.getElementById('privacy-modal').classList.remove('open')">&times;</button>
-    <h2>Privacy Policy & Cookie Policy</h2>
-    <div data-lang="it">
-      <h3>Titolare del Trattamento</h3>
-      <p>Remo a Testaccio — Piazza Santa Maria Liberatrice 44, 00153 Roma (RM). Telefono: 06 574 6270.</p>
-      <h3>Dati Trattati</h3>
-      <p>Il sito raccoglie dati di navigazione anonimi (indirizzo IP parziale, pagine visitate, durata sessione) tramite Google Analytics 4 (GA4), previo consenso esplicito dell'utente.</p>
-      <h3>Cookie Tecnici (sempre attivi)</h3>
-      <p>Necessari per il funzionamento del sito: gestione consenso cookie, preferenza lingua. Nessun dato personale trasmesso a terzi.</p>
-      <h3>Cookie Analitici (con consenso)</h3>
-      <p>Google Analytics 4 (GA4) — fornitore Google LLC. Finalità: analisi statistica delle visite. I dati sono anonimizzati. Puoi revocare il consenso in qualsiasi momento cliccando "Privacy Policy & Cookie" in fondo alla pagina.</p>
-      <h3>Diritti dell'Utente (GDPR)</h3>
-      <p>Hai diritto di accesso, rettifica, cancellazione, limitazione del trattamento e portabilità dei dati. Per esercitare i tuoi diritti, contattaci al numero indicato. Hai il diritto di proporre reclamo al Garante per la Protezione dei Dati Personali (www.garanteprivacy.it).</p>
-      <h3>Base Giuridica</h3>
-      <p>Cookie tecnici: legittimo interesse (art. 6.1.f GDPR). Cookie analitici: consenso esplicito (art. 6.1.a GDPR).</p>
-    </div>
-    <div data-lang="en">
-      <h3>Data Controller</h3>
-      <p>Remo a Testaccio — Piazza Santa Maria Liberatrice 44, 00153 Roma (RM). Phone: 06 574 6270.</p>
-      <h3>Data Collected</h3>
-      <p>The site collects anonymous navigation data (partial IP, pages visited, session duration) via Google Analytics 4 (GA4), subject to explicit user consent.</p>
-      <h3>Technical Cookies (always active)</h3>
-      <p>Required for site functionality: cookie consent management, language preference. No personal data transmitted to third parties.</p>
-      <h3>Analytical Cookies (with consent)</h3>
-      <p>Google Analytics 4 (GA4) — provided by Google LLC. Purpose: statistical analysis of visits. Data is anonymized. You may withdraw consent at any time via the "Privacy Policy & Cookies" link in the footer.</p>
-      <h3>User Rights (GDPR)</h3>
-      <p>You have the right of access, rectification, erasure, restriction, and data portability. To exercise your rights, contact us at the number above. You have the right to lodge a complaint with the Italian Data Protection Authority (www.garanteprivacy.it).</p>
-      <h3>Legal Basis</h3>
-      <p>Technical cookies: legitimate interest (Art. 6.1.f GDPR). Analytical cookies: explicit consent (Art. 6.1.a GDPR).</p>
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-inner">
+    <p class="cookie-text"><span data-lang="it">🍪 Utilizziamo cookie tecnici e, con il tuo consenso, Google Analytics (GA4). Leggi la <a href="#" onclick="openPrivacy();return false">Privacy Policy</a>.</span><span data-lang="en">🍪 We use technical cookies and, with consent, Google Analytics (GA4). Read our <a href="#" onclick="openPrivacy();return false">Privacy Policy</a>.</span></p>
+    <div class="cookie-btns">
+      <button class="cookie-btn cbr" onclick="rejectCookies()"><span data-lang="it">Solo necessari</span><span data-lang="en">Essential only</span></button>
+      <button class="cookie-btn cba" onclick="acceptCookies()"><span data-lang="it">Accetta tutti</span><span data-lang="en">Accept all</span></button>
     </div>
   </div>
 </div>
 
+<div class="privacy-modal" id="privacyModal" onclick="if(event.target===this)closePrivacy()">
+  <div class="privacy-box">
+    <button class="privacy-close" onclick="closePrivacy()"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <p class="priv-ey">Remo a Testaccio</p>
+    <h2 class="priv-title"><span data-lang="it">Privacy &<br><em>Cookie Policy</em></span><span data-lang="en">Privacy &<br><em>Cookie Policy</em></span></h2>
+    <div data-lang-block="it"><p class="priv-st">Titolare del Trattamento</p><p class="priv-b">Remo a Testaccio — Piazza Santa Maria Liberatrice 44, 00153 Roma. Tel: <a href="tel:+390657462701">06 574 6270</a></p><p class="priv-st">Cookie Tecnici</p><p class="priv-b">Necessari al funzionamento del sito. Nessun dato personale trasmesso a terzi.</p><p class="priv-st">Cookie Analitici (con consenso)</p><p class="priv-b">Google Analytics 4 — analisi statistica anonima. Puoi revocare il consenso dal footer.</p><p class="priv-st">Diritti GDPR</p><p class="priv-b">Accesso, rettifica, cancellazione e portabilità dei dati. Reclamo al <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">Garante Privacy</a>.</p><div style="margin-top:22px;display:flex;gap:8px"><button class="cookie-btn cbr" style="border:1px solid rgba(0,0,0,.2)!important;color:#444" onclick="rejectCookies();closePrivacy()">Solo necessari</button><button class="cookie-btn cba" onclick="acceptCookies();closePrivacy()">Accetta tutti</button></div></div>
+    <div data-lang-block="en"><p class="priv-st">Data Controller</p><p class="priv-b">Remo a Testaccio — Piazza Santa Maria Liberatrice 44, 00153 Rome. Tel: <a href="tel:+390657462701">06 574 6270</a></p><p class="priv-st">Technical Cookies</p><p class="priv-b">Required for functionality. No personal data transmitted to third parties.</p><p class="priv-st">Analytics Cookies (with consent)</p><p class="priv-b">Google Analytics 4 — anonymous statistical analysis. Revoke consent via footer link.</p><p class="priv-st">Your Rights (GDPR)</p><p class="priv-b">Access, rectification, erasure and data portability. Complaint to the <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">Italian DPA</a>.</p><div style="margin-top:22px;display:flex;gap:8px"><button class="cookie-btn cbr" style="border:1px solid rgba(0,0,0,.2)!important;color:#444" onclick="rejectCookies();closePrivacy()">Essential only</button><button class="cookie-btn cba" onclick="acceptCookies();closePrivacy()">Accept all</button></div></div>
+  </div>
+</div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','GA_MEASUREMENT_ID');</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
-// ===== MENU DATA =====
-const menuData = {
-  pizze: [
-    {
-      id:'margherita-bufala',
-      category_it:'Classici',category_en:'Classics',
-      name_it:'Margherita di Bufala',name_en:'Margherita di Bufala',
-      desc_it:'Pomodoro San Marzano, mozzarella di bufala campana DOP, basilico fresco, olio EVO.',
-      desc_en:'San Marzano tomato, DOP buffalo mozzarella, fresh basil, extra virgin olive oil.',
-      price:12,
-      image:'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=800&q=80&fit=crop',
-      allergens:['glutine','latticini']
-    },
-    {
-      id:'diavola',
-      category_it:'Classici',category_en:'Classics',
-      name_it:'Diavola',name_en:'Diavola',
-      desc_it:'Pomodoro, fior di latte, salame piccante calabrese, origano, peperoncino.',
-      desc_en:'Tomato, fior di latte, spicy Calabrian salami, oregano, chilli.',
-      price:11,
-      image:'https://images.unsplash.com/photo-1628840042765-356cda07504e?w=800&q=80&fit=crop',
-      allergens:['glutine','latticini']
-    },
-    {
-      id:'capricciosa',
-      category_it:'Speciali',category_en:'Specials',
-      name_it:'Capricciosa',name_en:'Capricciosa',
-      desc_it:'Pomodoro, fior di latte, prosciutto cotto, funghi champignon, carciofi, olive, uovo sodo.',
-      desc_en:'Tomato, fior di latte, cooked ham, mushrooms, artichokes, olives, hard-boiled egg.',
-      price:12,
-      image:'https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=800&q=80&fit=crop',
-      allergens:['glutine','latticini','uova']
-    },
-    {
-      id:'remo',
-      category_it:'La Nostra',category_en:'Our Own',
-      name_it:'Pizza Remo',name_en:'Pizza Remo',
-      desc_it:'Ricetta della casa: pomodoro, mozzarella, salsiccia di maiale, broccoli romaneschi, peperoncino. La preferita dei romani.',
-      desc_en:'House recipe: tomato, mozzarella, pork sausage, Roman broccoli, chilli. The favourite of the Romans.',
-      price:13,
-      image:'https://images.unsplash.com/photo-1548369937-47519962c11a?w=800&q=80&fit=crop',
-      allergens:['glutine','latticini']
-    },
-    {
-      id:'bresaola',
-      category_it:'Speciali',category_en:'Specials',
-      name_it:'Bresaola e Rucola',name_en:'Bresaola & Rocket',
-      desc_it:'Base bianca, mozzarella, bresaola di manzo, rucola fresca, scaglie di parmigiano reggiano, limone.',
-      desc_en:'White base, mozzarella, beef bresaola, fresh rocket, parmigiano reggiano shavings, lemon.',
-      price:13,
-      image:'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=800&q=80&fit=crop',
-      allergens:['glutine','latticini']
-    },
-    {
-      id:'san-remo',
-      category_it:'Speciali',category_en:'Specials',
-      name_it:'San Remo',name_en:'San Remo',
-      desc_it:'Pomodoro, fior di latte, prosciutto San Daniele DOP, rucola, scaglie di grana. Servita fredda sopra.',
-      desc_en:'Tomato, fior di latte, San Daniele DOP ham, rocket, grana shavings. Toppings served cold.',
-      price:14,
-      image:'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&q=80&fit=crop',
-      allergens:['glutine','latticini']
-    },
-    {
-      id:'calzone',
-      category_it:'Speciali',category_en:'Specials',
-      name_it:'Calzone',name_en:'Calzone',
-      desc_it:'Ripieno di fior di latte, ricotta fresca, salame, pepe nero. Cotto nel forno a legna, croccante fuori, morbido dentro.',
-      desc_en:'Filled with fior di latte, fresh ricotta, salami, black pepper. Wood-fired, crispy outside, soft inside.',
-      price:12,
-      image:'https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?w=800&q=80&fit=crop',
-      allergens:['glutine','latticini']
-    },
-    {
-      id:'napoletana',
-      category_it:'Classici',category_en:'Classics',
-      name_it:'Napoletana',name_en:'Napoletana',
-      desc_it:'Pomodoro, mozzarella, alici di Cetara, capperi di Pantelleria, origano, olio EVO.',
-      desc_en:'Tomato, mozzarella, Cetara anchovies, Pantelleria capers, oregano, extra virgin olive oil.',
-      price:11,
-      image:'https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=800&q=80&fit=crop',
-      allergens:['glutine','latticini','pesce']
-    },
-  ],
-  antipastiTab: [
-    {
-      id:'suppli',
-      category_it:'Antipasti',category_en:'Starters',
-      name_it:'Supplì al Telefono',name_en:'Supplì al Telefono',
-      desc_it:'Riso al ragù avvolto in panatura croccante, con cuore di mozzarella filante. Fritti al momento.',
-      desc_en:'Ragù rice in crispy breadcrumb crust with molten mozzarella heart. Fried to order.',
-      price:2.5,
-      image:'https://images.unsplash.com/photo-1601924582970-9238bcb495d9?w=800&q=80&fit=crop',
-      allergens:['glutine','latticini','uova']
-    },
-    {
-      id:'bruschetta',
-      category_it:'Antipasti',category_en:'Starters',
-      name_it:'Bruschette al Pomodoro',name_en:'Tomato Bruschette',
-      desc_it:'Pane di casa abbrustolito, pomodoro fresco condito, aglio, basilico, olio EVO. Le migliori di Roma, dicono.',
-      desc_en:'Toasted house bread, dressed fresh tomato, garlic, basil, extra virgin olive oil. The best in Rome, they say.',
-      price:6,
-      image:'https://images.unsplash.com/photo-1506354666786-959d6d497f1a?w=800&q=80&fit=crop',
-      allergens:['glutine']
-    },
-    {
-      id:'baccala',
-      category_it:'Antipasti',category_en:'Starters',
-      name_it:'Filetti di Baccalà',name_en:'Salt Cod Fillets',
-      desc_it:'Baccalà in pastella croccante, fritto in olio di semi. Ricetta romana classica, nessuna modifica da 60 anni.',
-      desc_en:'Salt cod in crispy batter, fried in seed oil. Classic Roman recipe, unchanged for 60 years.',
-      price:8,
-      image:'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=800&q=80&fit=crop',
-      allergens:['glutine','pesce']
-    },
-    {
-      id:'fiori-zucca',
-      category_it:'Antipasti',category_en:'Starters',
-      name_it:'Fiori di Zucca Fritti',name_en:'Fried Courgette Flowers',
-      desc_it:'Fiori di zucca ripieni di ricotta e alici, in pastella leggera e fritta. Solo quando di stagione.',
-      desc_en:'Courgette flowers filled with ricotta and anchovies, in light batter and fried. Available in season only.',
-      price:7,
-      image:'https://images.unsplash.com/photo-1555072956-7758afb20e8f?w=800&q=80&fit=crop',
-      allergens:['glutine','latticini','pesce','uova']
-    },
-    {
-      id:'melanzane',
-      category_it:'Antipasti',category_en:'Starters',
-      name_it:'Parmigiana di Melanzane',name_en:'Melanzane Parmigiana',
-      desc_it:'Strati di melanzane fritte, pomodoro, mozzarella e parmigiano. Servita calda, porzione generosa.',
-      desc_en:'Layers of fried aubergine, tomato, mozzarella and parmesan. Served hot, generous portion.',
-      price:9,
-      image:'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80&fit=crop',
-      allergens:['latticini','uova']
-    },
-    {
-      id:'mozzarelline',
-      category_it:'Antipasti',category_en:'Starters',
-      name_it:'Mozzarelline Fritte',name_en:'Fried Mini Mozzarelle',
-      desc_it:'Piccole mozzarelle in panatura dorata e croccante, fritte al momento. Cuore filante garantito.',
-      desc_en:'Small mozzarelle in golden crispy breadcrumbs, fried fresh. Guaranteed molten centre.',
-      price:7,
-      image:'https://images.unsplash.com/photo-1550315732-a4e2cd2a9ab5?w=800&q=80&fit=crop',
-      allergens:['glutine','latticini','uova']
-    },
-  ],
-  dolci: [
-    {
-      id:'tiramisu',
-      category_it:'Dolci',category_en:'Desserts',
-      name_it:'Tiramisù',name_en:'Tiramisù',
-      desc_it:'Mascarpone, savoiardi imbevuti di caffè espresso, cacao amaro in polvere. Fatto in casa ogni giorno. Il migliore di Testaccio, giurano.',
-      desc_en:'Mascarpone, savoiardi soaked in espresso, bitter cocoa powder. Made in-house daily. The best in Testaccio, they swear.',
-      price:5,
-      image:'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80&fit=crop',
-      allergens:['glutine','latticini','uova']
-    },
-    {
-      id:'crostata',
-      category_it:'Dolci',category_en:'Desserts',
-      name_it:'Crostata della Casa',name_en:'House Crostata',
-      desc_it:'Pasta frolla burrosa con marmellata di albicocca o visciole. Ricetta della nonna, fatta ogni mattina.',
-      desc_en:'Buttery shortcrust pastry with apricot or cherry jam. Grandmother\'s recipe, made every morning.',
-      price:4,
-      image:'https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?w=800&q=80&fit=crop',
-      allergens:['glutine','latticini','uova']
-    },
-    {
-      id:'panna-cotta',
-      category_it:'Dolci',category_en:'Desserts',
-      name_it:'Panna Cotta',name_en:'Panna Cotta',
-      desc_it:'Crema di panna con vaniglia, servita con coulis di frutti di bosco freschi di stagione.',
-      desc_en:'Vanilla cream set with fresh seasonal berry coulis.',
-      price:5,
-      image:'https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&q=80&fit=crop',
-      allergens:['latticini']
-    },
-  ]
-};
+const menuData=[
+  {id:"margherita",category:"pizze",name_it:"Margherita",name_en:"Margherita",desc_it:"Pomodoro San Marzano, fior di latte, basilico fresco. La base di tutto.",desc_en:"San Marzano tomato, fior di latte, fresh basil. The foundation of everything.",price:10,image:"https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=800&q=80",allergens:["glutine","latticini"]},
+  {id:"diavola",category:"pizze",name_it:"Diavola",name_en:"Diavola",desc_it:"Pomodoro, mozzarella, salame piccante calabrese. Piccante quanto si deve.",desc_en:"Tomato, mozzarella, spicy Calabrian salami. As hot as it should be.",price:12,image:"https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80",allergens:["glutine","latticini"]},
+  {id:"carciofi",category:"pizze",name_it:"Carciofi e Salsiccia",name_en:"Artichoke & Sausage",desc_it:"Pomodoro, mozzarella, carciofi romani, salsiccia di maiale. Un classico romano.",desc_en:"Tomato, mozzarella, Roman artichokes, pork sausage. A Roman classic.",price:13,image:"https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&q=80",allergens:["glutine","latticini"]},
+  {id:"bianca",category:"pizze",name_it:"Bianca Rucola e Speck",name_en:"White Pizza Rocket & Speck",desc_it:"Senza pomodoro. Mozzarella, rucola fresca, speck, scaglie di parmigiano.",desc_en:"No tomato. Mozzarella, fresh rocket, speck, parmesan shavings.",price:14,image:"https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=800&q=80",allergens:["glutine","latticini"]},
+  {id:"suppli",category:"antipasti",name_it:"Supplì al Telefono",name_en:"Roman Rice Balls",desc_it:"Riso al sugo, cuore di mozzarella filante, fritti in olio bollente.",desc_en:"Rice with tomato sauce, melted mozzarella heart, fried in hot oil.",price:6,image:"https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=800&q=80",allergens:["glutine","latticini","uova"]},
+  {id:"bruschetta",category:"antipasti",name_it:"Bruschetta al Pomodoro",name_en:"Bruschetta",desc_it:"Pane tostato, datterini, aglio, basilico, olio EVO.",desc_en:"Toasted bread, datterini tomatoes, garlic, basil, extra virgin olive oil.",price:5,image:"https://images.unsplash.com/photo-1506354666786-959d6d497f1a?w=800&q=80",allergens:["glutine"]},
+  {id:"tiramisu",category:"dolci",name_it:"Tiramisù della Casa",name_en:"House Tiramisù",desc_it:"Savoiardi imbevuti di espresso, mascarpone, uova fresche, cacao amaro. Fatto ogni mattina.",desc_en:"Ladyfingers soaked in espresso, mascarpone, fresh eggs, bitter cocoa. Made every morning.",price:5,image:"https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80",allergens:["uova","latticini","glutine"]},
+  {id:"crostata",category:"dolci",name_it:"Crostata di Ricotta",name_en:"Ricotta Tart",desc_it:"Frolla della casa, ricotta di pecora, scorza d'arancia, miele millefiori.",desc_en:"Homemade shortcrust, sheep ricotta, orange zest, wildflower honey.",price:4,image:"https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=800&q=80",allergens:["glutine","uova","latticini"]}
+];
 
-// ===== RENDER MENU GRIDS =====
-let currentLang = 'it';
-
-function renderMenuGrids(){
-  renderGrid('menu-grid-pizze', menuData.pizze);
-  renderGrid('menu-grid-antipasti', menuData.antipastiTab);
-  renderGrid('menu-grid-dolci', menuData.dolci);
-}
-
-function renderGrid(containerId, items){
-  const container = document.getElementById(containerId);
-  if(!container) return;
-  container.innerHTML = '';
-  items.forEach((item, i) => {
-    const cat = currentLang === 'it' ? item.category_it : item.category_en;
-    const name = currentLang === 'it' ? item.name_it : item.name_en;
-    const desc = currentLang === 'it' ? item.desc_it : item.desc_en;
-    const priceStr = Number.isInteger(item.price) ? '€' + item.price : '€' + item.price.toFixed(2).replace('.',',');
-    const zoomText = currentLang === 'it' ? 'Vedi dettagli' : 'View details';
-    const card = document.createElement('div');
-    card.className = 'menu-card reveal' + (i < 4 ? ' reveal-delay-' + (i+1) : '');
-    card.setAttribute('data-item-id', item.id);
-    card.innerHTML = `
-      <div class="menu-card-img">
-        <img src="${item.image}" alt="${name}" loading="lazy">
-        <div class="menu-card-overlay"><div class="menu-card-zoom">${zoomText}</div></div>
-      </div>
-      <div class="menu-card-info">
-        <div class="menu-card-cat">${cat}</div>
-        <div class="menu-card-name">${name}</div>
-        <div class="menu-card-desc">${desc}</div>
-        <div class="menu-card-price">${priceStr}</div>
-      </div>`;
-    card.addEventListener('click', () => openModal(item));
-    container.appendChild(card);
-  });
-  observeReveal();
-}
-
-// ===== MODAL =====
-function openModal(item){
-  const lang = currentLang;
-  document.getElementById('modal-img').src = item.image;
-  document.getElementById('modal-img').alt = lang === 'it' ? item.name_it : item.name_en;
-  document.getElementById('modal-cat').textContent = lang === 'it' ? item.category_it : item.category_en;
-  document.getElementById('modal-name').textContent = lang === 'it' ? item.name_it : item.name_en;
-  document.getElementById('modal-desc').textContent = lang === 'it' ? item.desc_it : item.desc_en;
-  const p = item.price;
-  document.getElementById('modal-price').textContent = Number.isInteger(p) ? '€' + p : '€' + p.toFixed(2).replace('.',',');
-  const allergenContainer = document.getElementById('modal-allergens');
-  allergenContainer.innerHTML = item.allergens.map(a => `<span class="allergen-tag">${a}</span>`).join('');
-  document.getElementById('modal-overlay').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeModal(e){
-  if(e && e.target !== document.getElementById('modal-overlay') && !e.target.classList.contains('modal-close')) return;
-  document.getElementById('modal-overlay').classList.remove('open');
-  document.body.style.overflow = '';
-}
-document.addEventListener('keydown', e => { if(e.key === 'Escape') { closeModal(); document.getElementById('privacy-modal').classList.remove('open'); }});
-
-// ===== TABS =====
-function switchTab(tabId, btn){
-  document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
-  document.getElementById(tabId).classList.add('active');
-  btn.classList.add('active');
-}
-
-// ===== LANG =====
+let currentLang='it';
 function setLang(lang){
-  currentLang = lang;
-  document.body.classList.toggle('lang-en', lang === 'en');
-  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('btn-' + lang)?.classList.add('active');
-  renderMenuGrids();
+  currentLang=lang;
+  document.body.classList.toggle('lang-en',lang==='en');
+  document.querySelectorAll('.lang-btn').forEach((b,i)=>b.classList.toggle('active',(i===0&&lang==='it')||(i===1&&lang==='en')));
 }
 
-// ===== HAMBURGER =====
-function toggleMenu(){
-  const menu = document.getElementById('mobile-menu');
-  const btn = document.getElementById('hamburger');
-  const isOpen = menu.classList.contains('open');
-  menu.classList.toggle('open', !isOpen);
-  btn.classList.toggle('open', !isOpen);
-  document.body.style.overflow = isOpen ? '' : 'hidden';
-}
-function closeMenu(){
-  document.getElementById('mobile-menu').classList.remove('open');
-  document.getElementById('hamburger').classList.remove('open');
-  document.body.style.overflow = '';
-}
+function catLabel(cat){return{pizze:'Pizza',antipasti:'Antipasto',dolci:'Dolce'}[cat]||cat}
 
-// ===== NAV SCROLL =====
-window.addEventListener('scroll', () => {
-  document.getElementById('main-nav').classList.toggle('scrolled', window.scrollY > 60);
-}, {passive:true});
-
-// ===== INTERSECTION OBSERVER =====
-function observeReveal(){
-  const els = document.querySelectorAll('.reveal:not(.visible)');
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('visible');
-        obs.unobserve(entry.target);
-      }
+function renderMenu(cat='tutti'){
+  const grid=document.getElementById('menuGrid');
+  const items=cat==='tutti'?menuData:menuData.filter(d=>d.category===cat);
+  grid.innerHTML=items.map(item=>`
+    <div class="menu-card" onclick="openModal('${item.id}')">
+      <img class="menu-card-img" src="${item.image}" alt="${item.name_it}" loading="lazy"/>
+      <div class="menu-card-overlay">
+        <div class="menu-card-cat">${catLabel(item.category)}</div>
+        <div class="menu-card-name">${item.name_it}</div>
+        <div class="menu-card-price">€${item.price}</div>
+      </div>
+      <div class="menu-card-plus"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+    </div>`).join('');
+  if(typeof gsap!=='undefined'&&typeof ScrollTrigger!=='undefined'){
+    grid.querySelectorAll('.menu-card').forEach((el,i)=>{
+      gsap.fromTo(el,{opacity:0,y:28},{opacity:1,y:0,duration:.65,ease:'power3.out',delay:i*.07,
+        scrollTrigger:{trigger:el,start:'top 92%',once:true}});
     });
-  }, {threshold:.12});
-  els.forEach(el => obs.observe(el));
+  }
 }
 
-// ===== COOKIE =====
-function acceptCookies(all){
-  document.getElementById('cookie-banner').style.display = 'none';
-  // Consent saved in memory (no localStorage per sandbox rules)
-  if(all) console.log('GA4 analytics enabled');
-}
-function openPrivacy(e){
-  if(e) e.preventDefault();
-  document.getElementById('privacy-modal').classList.add('open');
-}
-
-// ===== INIT =====
-document.addEventListener('DOMContentLoaded', () => {
-  renderMenuGrids();
-  observeReveal();
-  setTimeout(() => {
-    document.getElementById('cookie-banner').style.display = 'block';
-  }, 1200);
+document.getElementById('menuTabs').addEventListener('click',e=>{
+  const tab=e.target.closest('.menu-tab');
+  if(!tab)return;
+  document.querySelectorAll('.menu-tab').forEach(t=>t.classList.remove('active'));
+  tab.classList.add('active');
+  renderMenu(tab.dataset.cat);
 });
+
+function openModal(id){
+  const item=menuData.find(d=>d.id===id);
+  if(!item)return;
+  document.getElementById('modalImg').src=item.image;
+  document.getElementById('modalImg').alt=item.name_it;
+  document.getElementById('modalCat').textContent=catLabel(item.category).toUpperCase();
+  document.getElementById('modalTitle').textContent=currentLang==='en'?item.name_en:item.name_it;
+  document.getElementById('modalDesc').textContent=currentLang==='en'?item.desc_en:item.desc_it;
+  document.getElementById('modalPrice').textContent='€'+item.price;
+  document.getElementById('modalAllergens').innerHTML=item.allergens.map(a=>`<span class="allergen-tag">${a}</span>`).join('');
+  document.getElementById('menuModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){document.getElementById('menuModal').classList.remove('open');document.body.style.overflow=''}
+document.getElementById('modalClose').addEventListener('click',closeModal);
+document.getElementById('menuModal').addEventListener('click',e=>{if(e.target===document.getElementById('menuModal'))closeModal()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal();closePrivacy()}});
+
+function showCookieBanner(){document.getElementById('cookieBanner').style.display='block'}
+function hideCookieBanner(){document.getElementById('cookieBanner').style.display='none'}
+function acceptCookies(){localStorage.setItem('remo_ck','y');hideCookieBanner()}
+function rejectCookies(){localStorage.setItem('remo_ck','n');hideCookieBanner()}
+function openPrivacy(){document.getElementById('privacyModal').style.display='block';document.body.style.overflow='hidden'}
+function closePrivacy(){document.getElementById('privacyModal').style.display='none';document.body.style.overflow=''}
+if(!localStorage.getItem('remo_ck'))setTimeout(showCookieBanner,1500);
+
+const cObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting&&!e.target.dataset.animated){
+      e.target.dataset.animated='1';
+      const tgt=parseInt(e.target.dataset.counter);
+      const suf=e.target.dataset.suffix||'';
+      const pre=e.target.dataset.prefix||'';
+      const special=e.target.dataset.special;
+      const dur=1500,start=performance.now();
+      function tick(now){
+        const p=Math.min((now-start)/dur,1);
+        const ease=1-Math.pow(1-p,3);
+        if(special==='rating') e.target.textContent=(ease*4.4).toFixed(1)+'★';
+        else e.target.textContent=pre+Math.round(ease*tgt)+suf;
+        if(p<1)requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+  });
+},{threshold:.5});
+document.querySelectorAll('[data-counter]').forEach(el=>cObs.observe(el));
+
+// CURSOR
+const cur=document.getElementById('cursor'),fol=document.getElementById('cursorFollower');
+let mx=0,my=0,fx=0,fy=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'});
+(function loop(){fx+=(mx-fx)*.1;fy+=(my-fy)*.1;fol.style.left=fx+'px';fol.style.top=fy+'px';requestAnimationFrame(loop)})();
+document.querySelectorAll('a,button,[onclick]').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.width='14px';cur.style.height='14px';fol.style.width='52px';fol.style.height='52px';fol.style.borderColor='rgba(200,56,42,.45)'});
+  el.addEventListener('mouseleave',()=>{cur.style.width='8px';cur.style.height='8px';fol.style.width='36px';fol.style.height='36px';fol.style.borderColor='rgba(245,240,232,.4)'});
+});
+
+window.addEventListener('load',()=>{
+  renderMenu('tutti');
+  if(typeof gsap==='undefined')return;
+  gsap.registerPlugin(ScrollTrigger);
+
+  // NAV scroll
+  window.addEventListener('scroll',()=>{
+    document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);
+  });
+
+  // HERO timeline
+  const tl=gsap.timeline({defaults:{ease:'power3.out'}});
+  tl.fromTo('#heroBg',{scale:1.12},{scale:1,duration:2.4,ease:'power2.out'},0)
+    .fromTo('#heroEye',{yPercent:100},{yPercent:0,duration:.75},0.35)
+    .fromTo('#hl1',{yPercent:105},{yPercent:0,duration:.9},0.5)
+    .fromTo('#hl2',{yPercent:105},{yPercent:0,duration:.9},0.66)
+    .fromTo('#hl3',{yPercent:105},{yPercent:0,duration:.9},0.82)
+    .fromTo('#heroSub',{yPercent:100},{yPercent:0,duration:.8},1.0)
+    .fromTo('#heroCta',{y:40,opacity:0},{y:0,opacity:1,duration:.8},1.1)
+    .fromTo('#heroScroll',{opacity:0},{opacity:1,duration:.8},1.5);
+
+  // HERO PARALLAX
+  gsap.to('#heroBg',{yPercent:28,ease:'none',
+    scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:1.2}});
+
+  // REC PARALLAX
+  gsap.to('#recBg',{yPercent:22,ease:'none',
+    scrollTrigger:{trigger:'#rec-section',start:'top bottom',end:'bottom top',scrub:1.2}});
+
+  // STORIA year scroll
+  gsap.to('.storia-bg-year',{yPercent:12,ease:'none',
+    scrollTrigger:{trigger:'#storia',start:'top bottom',end:'bottom top',scrub:2}});
+
+  // SEGRETO image subtle parallax
+  gsap.to('.segreto-img-main',{yPercent:-6,ease:'none',
+    scrollTrigger:{trigger:'#segreto',start:'top bottom',end:'bottom top',scrub:1.5}});
+
+  // REVEAL elements
+  document.querySelectorAll('.reveal').forEach(el=>{
+    if(el.closest('#hero'))return;
+    gsap.fromTo(el,{opacity:0,y:38},{opacity:1,y:0,duration:.8,ease:'power3.out',
+      scrollTrigger:{trigger:el,start:'top 87%',once:true}});
+  });
+
+  // FOTO STRIP stagger
+  document.querySelectorAll('.foto-item').forEach((el,i)=>{
+    gsap.fromTo(el,{opacity:0,y:44},{opacity:1,y:0,duration:.75,delay:i*.1,ease:'power3.out',
+      scrollTrigger:{trigger:'#fotoStrip',start:'top 85%',once:true}});
+  });
+
+  // STAT stagger
+  document.querySelectorAll('.stat').forEach((el,i)=>{
+    gsap.fromTo(el,{opacity:0,y:20},{opacity:1,y:0,duration:.6,delay:i*.09,ease:'power3.out',
+      scrollTrigger:{trigger:'.segreto-stats',start:'top 88%',once:true}});
+  });
+});
+// UPGRADE: Reservation form goes here
+// UPGRADE: Chatbot widget script goes here
+// UPGRADE: Email capture popup goes here
 </script>
 </body>
 </html>
